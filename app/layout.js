@@ -1,5 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import Header from './Header'
 
 export const metadata = {
   title: 'Swipe North',
@@ -14,7 +15,10 @@ const inter = Inter ({
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.className}>
-      <body>{children}</body>
+      <body>
+        <Header />
+          <main className='mainContent'>{children}</main>
+      </body>
     </html>
   )
 }

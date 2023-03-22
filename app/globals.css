@@ -22,21 +22,26 @@
 html,
 body {
   max-width: 100vw;
-  max-height: 852px;
+  height: 852px;
   overflow-x: hidden;
   background: var(--lightgrey);
   display: flex;
   flex-direction: column;
 }
 
+.mainContent{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   color: var(--black);
-  margin: 12px;
+  display: flex;
 }
 
 a {
   color: inherit;
   text-decoration: none;
 }
-
 
