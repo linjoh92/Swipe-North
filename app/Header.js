@@ -17,8 +17,10 @@ return (
       />
     </Link>
     <div className={styles.headerIconContainer}>
-      <FaHeart style={{ fontSize: '1.8rem' , color: '#9EB45A' }} />
-      <Link href="/">
+      <Link  href="/matchJob">
+        <FaHeart style={{ fontSize: '1.8rem' , color: '#9EB45A' }} />
+      </Link>
+      <Link href="/menu">
         <Image
           src="/image/hamburger_manu.svg"
           alt="menu"
