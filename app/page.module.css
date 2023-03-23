@@ -7,7 +7,7 @@
   justify-content: center;
 }
 
-.swipeCard{
+.swipeCard {
   height: 480px;
   width: 370px;
   border-radius: 10px;
@@ -19,19 +19,19 @@
   color: var(--white);
 }
 
-.filterContainer{
+.filterContainer {
   background-color: var(--black);
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  height:84px;
+  height: 84px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   width: 100%;
   color: var(--white);
 }
 
-.filterContainer input{
+.filterContainer input {
   height: 42px;
   width: 290px;
   padding: 10px;

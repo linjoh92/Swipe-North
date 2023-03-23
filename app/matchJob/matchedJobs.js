@@ -1,13 +1,12 @@
 import styles from './matchJob.module.css'
-import Image from 'next/image';
-import Link from 'next/link';
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function MatchedJobs(props) {
+  const { number, image, rubrik, titel, type } = props
 
-const { number, image, rubrik, titel, type} = props
-
-return (
-  <div className={styles.matchedContainer}>
+  return (
+    <div className={styles.matchedContainer}>
       <Image
         src={image}
         alt="jobb"
@@ -16,12 +15,12 @@ return (
         className={styles.image}
       />
       <div className={styles.textConatiner}>
-        <Link href={`/matchJob/${number}`}> 
+        <Link href={`/matchJob/${number}`}>
           <h2>{rubrik}</h2>
-        </Link> 
+        </Link>
         <p>{titel}</p>
         <p>{type}</p>
       </div>
-  </div>
+    </div>
   )
 }

@@ -1,4 +1,4 @@
-.header{
+.header {
   background-color: var(--white);
   display: flex;
   padding: 20px;
@@ -8,9 +8,10 @@
   width: 100%;
 }
 
-.headerIconContainer{
-    display: flex;
-    gap: 20px;
+.headerIconContainer {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 .likeBarContainer {
@@ -23,7 +24,7 @@
   width: 100%;
 }
 
-.superLikeConatiner{
+.superLikeConatiner {
   background-color: var(--white);
   border-radius: 50%;
   border: solid 6px var(--lightgrey);
@@ -34,7 +35,7 @@
   align-items: center;
 }
 
-.likeConatiner{
+.likeConatiner {
   background-color: var(--white);
   border-radius: 50%;
   border: solid 6px var(--lightgrey);
@@ -46,11 +47,11 @@
   align-items: center;
 }
 
-.likeConatiner:hover{
-    color: var(--darkgreen);
+.likeConatiner:hover {
+  color: var(--darkgreen);
 }
 
-.closeConatiner{
+.closeConatiner {
   font-size: 3rem;
   background-color: var(--white);
   border-radius: 50%;

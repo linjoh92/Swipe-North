@@ -1,14 +1,14 @@
 :root {
   --darkred: #721904;
-  --lightred: #8B341F;
-  --darkblue: #455B81;
-  --lightblue: #657B9F;
-  --darkgreen : #7B932E;
-  --lightgreen: #9EB45A;
-  --darkgrey:#B2B2B2;
-  --lightgrey: #E6E6E6;
+  --lightred: #8b341f;
+  --darkblue: #455b81;
+  --lightblue: #657b9f;
+  --darkgreen: #7b932e;
+  --lightgreen: #9eb45a;
+  --darkgrey: #b2b2b2;
+  --lightgrey: #e6e6e6;
   --black: #000000;
-  --white: #FFFFFF;
+  --white: #ffffff;
   font-size: 15px;
   --body-font: var(--font-inter);
 }
@@ -29,7 +29,7 @@ body {
   flex-direction: column;
 }
 
-.mainContent{
+.mainContent {
   height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
@@ -44,4 +44,3 @@ a {
   color: inherit;
   text-decoration: none;
 }
-

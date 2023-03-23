@@ -1,0 +1,73 @@
+.menuConatianer {
+  background-color: var(--white);
+  height: 100vh;
+  color: black;
+}
+
+.menuHeader {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: flex-end;
+}
+
+.logoConatiner {
+  height: 155px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 28px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px var(--lightgrey);
+}
+
+.menuListConatiner {
+  display: flex;
+  margin: 0 28px;
+  flex-direction: column;
+}
+
+.menuList {
+  display: flex;
+  flex-direction: column;
+  border-bottom: solid 1px var(--lightgrey);
+  height: 116px;
+  justify-content: center;
+  gap: 15px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.menuOption {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+}
+
+.flagContainer {
+  display: flex;
+  gap: 7px;
+}
+
+.engFlag {
+  opacity: 30%;
+}
+
+.infoContainer {
+  margin: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.infoContainer h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+}
+
+.infoContainer p {
+  text-align-last: left;
+  text-align: justify;
+}

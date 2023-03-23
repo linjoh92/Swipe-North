@@ -6,7 +6,7 @@ export const metadata = {
   title: 'Swipe North',
   description: 'Swipa på jobb i Skellefeå',
 }
-const inter = Inter ({
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
   weight: ['400', '500', '600', '700', '900'],
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={inter.className}>
       <body>
         <Header />
-          <main className='mainContent'>{children}</main>
+        <main className="mainContent">{children}</main>
       </body>
     </html>
   )
