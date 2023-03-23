@@ -12,8 +12,8 @@ return (
       <Image
         src="/image/skelleftea_logo_DOT_black.svg"
         alt="logo"
-        width={100}
-        height={100}
+        width={78}
+        height={42}
       />
     </Link>
     <div className={styles.headerIconContainer}>

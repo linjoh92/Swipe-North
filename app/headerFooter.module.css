@@ -2,7 +2,7 @@
   background-color: var(--white);
   display: flex;
   padding: 20px;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   height: 100px;
   width: 100%;
