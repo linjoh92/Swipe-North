@@ -1,46 +1,10 @@
 import styles from './matchJob.module.css'
 import MatchedJobs from './matchedJobs'
 import { BsChevronDown } from 'react-icons/bs'
+import Link from 'next/link'
+import machedJobInfo from '../JobAPI'
 
 export default function matchJobList() {
-  const machedJobInfo = [
-    {
-      number: '1',
-      image: '/./image/Swipekort_1.png',
-      rubrik: 'Skellefteå taxi',
-      titel: 'Taxichaufför',
-      type: 'Deltid',
-    },
-    {
-      number: '2',
-      image: '/./image/Swipekort_2.png',
-      rubrik: 'Northvolt',
-      titel: 'Gruppchef',
-      type: 'Heltid',
-    },
-    {
-      number: '3',
-      image: '/./image/Swipekort_3.png',
-      rubrik: 'Skellefteå Lasarett',
-      titel: 'Sjuksköterska',
-      type: 'Timanställning',
-    },
-    {
-      number: '4',
-      image: '/./image/Swipekort_5.png',
-      rubrik: 'Skellefteå taxi',
-      titel: 'Taxichaufför',
-      type: 'Heltid',
-    },
-    {
-      number: '5',
-      image: '/./image/Swipekort_4.png',
-      rubrik: 'Skellefteå Kommun',
-      titel: 'Förskolepedagog',
-      type: 'Deltid',
-    },
-  ]
-
   return (
     <div className={styles.matchListContainer}>
       <div className={styles.matchadeListNavBar}>
@@ -53,7 +17,14 @@ export default function matchJobList() {
         ))}
       </div>
       <div className={styles.matchListArrowContainer}>
-        <BsChevronDown style={{ color: 'black', fontSize: '2.5rem' }} />
+        <Link href="/">
+          <div className={styles.backToSwipe}>
+            <BsChevronDown
+              style={{ color: 'black', fontSize: '1.5rem', rotate: '90deg' }}
+            />
+            <p>Swipea mer</p>
+          </div>
+        </Link>
       </div>
     </div>
   )

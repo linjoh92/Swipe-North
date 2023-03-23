@@ -1,16 +1,18 @@
-import machedJobInfoApi from './jobAPI'
 import InfoAndSearchLayout from './infoAndSearchLayout'
 import styles from './searchJob.module.css'
 import Link from 'next/link'
+import machedJobInfo from '../../JobAPI'
+
+const shiftedJobInfo = [null, ...machedJobInfo.slice()]
 
 export default function JobInfoAndSearch({ params: { id } }) {
-  const job = machedJobInfoApi[id]
+  const job = shiftedJobInfo[id]
 
   if (!job) {
     return (
       <div className={styles.errorHandel}>
-        <p>Job not found</p>
-        <Link href="/">Back to swipe</Link>{' '}
+        <p>Hittade ingen jobbinfo</p>
+        <Link href="/matchJob">Tillbaka till Matchade jobb</Link>{' '}
       </div>
     )
   }
