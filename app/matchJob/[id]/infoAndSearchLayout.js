@@ -37,7 +37,7 @@ export default function InfoAndSearchLayout(props) {
           width={79}
           height={34}
         />
-        <p>{info}</p>
+        <p className={styles.descriptionJob}>{info}</p>
         <div className={styles.iconAndInfoConatainer}>
           <div className={styles.iconAndInfo}>
             <MdWorkHistory style={{ color: 'white', fontSize: '1.4rem' }} />

@@ -1,7 +1,7 @@
 import './globals.css'
 import { FaHeart } from 'react-icons/fa'
 import { IoIosClose } from 'react-icons/io'
-import styles from './headerFooter.module.css'
+import styles from './headerLikeBar.module.css'
 import superLike from '../public/image/superLikeIcon.svg'
 import Image from 'next/image'
 

@@ -1,9 +1,9 @@
 import InfoAndSearchLayout from './infoAndSearchLayout'
 import styles from './searchJob.module.css'
 import Link from 'next/link'
-import machedJobInfo from '../../JobAPI'
+import jobInfo from '../../jobAPI'
 
-const shiftedJobInfo = [null, ...machedJobInfo.slice()]
+const shiftedJobInfo = [null, ...jobInfo.slice()] //för att jobbAPI ska börja på 1 ist för 0
 
 export default function JobInfoAndSearch({ params: { id } }) {
   const job = shiftedJobInfo[id]

@@ -1,7 +1,10 @@
-.menuConatianer {
+.menuContainer {
   background-color: var(--white);
-  height: 100vh;
+  height: calc(100vh - 100px);
   color: black;
+  position: relative;
+  top: 100px;
+  z-index: 60;
 }
 
 .menuHeader {
@@ -12,7 +15,7 @@
   align-items: flex-end;
 }
 
-.logoConatiner {
+.logoContainer {
   height: 155px;
   display: flex;
   align-items: center;

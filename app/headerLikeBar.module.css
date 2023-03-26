@@ -1,11 +1,14 @@
 .header {
+  align-items: flex-end;
   background-color: var(--white);
   display: flex;
-  padding: 20px;
-  align-items: flex-end;
-  justify-content: space-between;
   height: 100px;
+  justify-content: space-between;
+  padding: 20px;
+  position: fixed;
   width: 100%;
+  z-index: 60;
+  filter: drop-shadow(0px 2px 3px rgba(0, 0, 0, 0.15));
 }
 
 .headerIconContainer {
@@ -15,13 +18,16 @@
 }
 
 .likeBarContainer {
+  align-items: center;
   background-color: var(--black);
   display: flex;
   height: 160px;
   justify-content: space-between;
   padding: 0px 60px;
-  align-items: center;
+  position: fixed;
+  top: calc(100vh - 160px);
   width: 100%;
+  z-index: 50;
 }
 
 .superLikeConatiner {
@@ -33,6 +39,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.superLikeConatiner:hover{
+  color: var(--darkblue);
+  border-color: var(--darkblue);
 }
 
 .likeConatiner {
@@ -49,6 +60,7 @@
 
 .likeConatiner:hover {
   color: var(--darkgreen);
+  border-color: var(--darkgreen);
 }
 
 .closeConatiner {
@@ -62,4 +74,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.closeConatiner:hover{
+  color: var(--darkred);
+  border-color: var(--darkred);
 }

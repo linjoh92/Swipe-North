@@ -7,7 +7,7 @@ import { useRouter } from 'next/navigation'
 import { FaHeart } from 'react-icons/fa'
 import { CgClose } from 'react-icons/cg'
 import { FiMenu } from 'react-icons/fi'
-import styles from './headerFooter.module.css'
+import styles from './headerLikeBar.module.css'
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -24,50 +24,30 @@ const Header = () => {
     setMenuOpen(!menuOpen)
   }
 
-  const closeIcon = (
+  const menuIcon = (
     <div onClick={toggleMenu}>
-      <CgClose style={{ fontSize: '2.2rem' }} />
+      {menuOpen ? (
+        <CgClose style={{ fontSize: '2.2rem' }} />
+      ) : (
+        <FiMenu style={{ fontSize: '2.2rem' }} />
+      )}
     </div>
   )
-
-  const menuIcon = menuOpen ? (
-    closeIcon
-  ) : (
-    <div onClick={toggleMenu}>
-      <FiMenu style={{ fontSize: '2.2rem' }} />
-    </div>
-  )
-
-  const handleLogoClick = () => {
-    if (menuOpen) {
-      router.push('/')
-      setMenuOpen(false)
-    }
-  }
-
-  const handleHeartClick = () => {
-    router.push('/matchJob')
-    if (menuOpen) {
-      setMenuOpen(false)
-    }
-  }
 
   return (
     <header className={styles.header}>
       <Link href="/">
-        <div onClick={handleLogoClick}>
-          <Image
-            src="/image/skelleftea_logo_DOT_black.svg"
-            alt="logo"
-            width={78}
-            height={42}
-          />
-        </div>
+        <Image
+          src="/image/skelleftea_logo_DOT_black.svg"
+          alt="logo"
+          width={78}
+          height={42}
+        />
       </Link>
       <div className={styles.headerIconContainer}>
-        <div onClick={handleHeartClick}>
+        <Link href='/matchJob'>
           <FaHeart style={{ fontSize: '1.8rem', color: '#9EB45A' }} />
-        </div>
+        </Link>
         <div className={styles.menuIcon}>{menuIcon}</div>
       </div>
     </header>

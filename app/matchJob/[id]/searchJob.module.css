@@ -1,7 +1,9 @@
 .infoAndSearchContainer {
   display: flex;
   flex-direction: column;
-  height: calc(100vh - 100px);
+  position: relative;
+  top: 100px;
+  min-height: calc(100vh - 100px);
 }
 
 .titelContainer {
@@ -63,11 +65,17 @@
   padding: 30px 42px;
 }
 
+.descriptionJob{
+  margin: 22px 0;
+  line-height: 19px;
+}
+
 .iconAndInfoConatainer {
   display: flex;
   flex-direction: column;
   width: 100%;
   gap: 5px;
+  margin-bottom: 25px;
 }
 
 .iconAndInfo {
@@ -103,3 +111,29 @@
 .errorHandel a {
   font-weight: 700;
 }
+
+.arrowContainer{
+  display: flex;
+  justify-content: space-between;
+  padding: 23px 42px;
+}
+
+.arrowRightFirstJob{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.arrow{
+  color: var(--black);
+  font-size: 1rem;
+  background-color: var(--white);
+  rotate: 0deg;
+  height: 46px;
+  padding: 10px;
+  width: 46px;
+  border-radius: 50%;
+}
+
+
+
