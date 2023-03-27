@@ -1,4 +1,3 @@
-
 const languageText = {
     swe: {
         //menu
@@ -9,17 +8,21 @@ const languageText = {
       title: 'SWIPE NORTH',
       description1: 'Swipe North är en revolutionerande app som gör det enklare än någonsin att söka jobb i Skellefteå.',
       description2: 'Med en liknande funktionalitet som den populära dating-appen Tinder, är det nu möjligt att enkelt söka jobb och nätverka med företag och rekryterare på ett sätt som är enkelt, kul och intuitivt.',
-        //matchJob
+        //matchJob & appliedJobs
       match: 'Matchade jobb',
       searched: 'Sökta jobb',
       swipeMore: 'Swipea mer',
-        //Complite Info and serach page
+        //Complite Info/serach page & Modal Quick info
+      back: 'Tillbaka',
       published: 'publicerat',
       days: 'dagar sedan',
       apply: 'Sök Jobb',
-       // Filterfunktion
-      rubrikFilter: 'Vad',
-      placeholder: 'Jobbtitel, nyckelord'
+      error: 'Hittade ingen jobbinfo',
+      backToMatched: 'Tillbaka till Matchade jobb',
+      // jobinfo
+      fullTime: 'Heltid',
+      partTime: 'Deltid',
+      hourly: 'Timanställd',
     },
     eng: {
         //menu
@@ -34,13 +37,17 @@ const languageText = {
       match: 'Matched jobs',
       searched: 'Applied jobs',
       swipeMore: 'Swipe more',
-        //Complite Info and serach page
+        //Complite Info/serach page & error page - Job not found
+      back: 'Back',
       published: 'published',
       days: 'days ago',
       apply: 'Apply Now',
-       // Filterfunktion
-      rubrikFilter: 'What',
-      placeholder: 'Jobtitle, keywords'
+      error: 'No job info found',
+      backMatched: 'Back to Matched jobs',
+        // jobinfo
+      fullTime: 'Full-time',
+      partTime: 'Part-time',
+      hourly: 'Hourly employee',
     }
   };
 

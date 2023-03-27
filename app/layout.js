@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Header from './Header'
 
+
 export const metadata = {
   title: 'Swipe North',
   description: 'Swipa på jobb i Skellefeå',

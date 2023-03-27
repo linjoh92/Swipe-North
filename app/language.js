@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useAtom } from 'jotai';
 import languageText from './textContent';
+import jobInfo from './jobAPI';
 import { languageAtom } from './languageAtom';
 
 export const useLanguage = () => {
@@ -10,7 +11,7 @@ export const useLanguage = () => {
   const [text, setText] = useState('');
 
   useEffect(() => {
-    language === 'swe' ? setText(languageText.swe) : setText(languageText.eng);
+    language === 'swe' ? setText(languageText.swe) : setText(languageText.eng) ;
   }, [language]);
 
   const toggleLanguage = () => {
