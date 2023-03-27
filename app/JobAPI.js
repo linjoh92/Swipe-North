@@ -1,4 +1,3 @@
-
 const jobInfo = [
   {
     number: '1',

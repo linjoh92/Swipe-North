@@ -1,7 +1,7 @@
 import styles from './appliedJobs.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import { BsCheckLg } from "react-icons/bs";
+import { BsCheckLg } from 'react-icons/bs'
 
 export default function AppliedJobs(props) {
   const { image, rubrik, titel, type, link } = props
@@ -17,7 +17,9 @@ export default function AppliedJobs(props) {
       />
       <div className={styles.textConatiner}>
         <Link href={link}>
-          <h2>{rubrik} <BsCheckLg /></h2>
+          <h2>
+            {rubrik} <BsCheckLg />
+          </h2>
         </Link>
         <p>{titel}</p>
         <p>{type}</p>

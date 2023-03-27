@@ -14,18 +14,27 @@ export default function Layout({ children, params }) {
       <div className={styles.arrowContainer}>
         {prevNumber !== undefined && (
           <Link href={`/matchJob/${prevNumber}`}>
-            <BsChevronLeft className={`${styles.arrow} ${activeNumber === 1 ? styles.show : ''}`}/>
+            <BsChevronLeft
+              className={`${styles.arrow} ${
+                activeNumber === 1 ? styles.show : ''
+              }`}
+            />
           </Link>
         )}
 
         {nextNumber !== undefined && (
-          <Link href={`/matchJob/${nextNumber}`} className={styles.arrowRightFirstJob}>
-            <BsChevronRight className={`${styles.arrow} ${activeNumber === 8 ? styles.hide : ''}`}/>
+          <Link
+            href={`/matchJob/${nextNumber}`}
+            className={styles.arrowRightFirstJob}
+          >
+            <BsChevronRight
+              className={`${styles.arrow} ${
+                activeNumber === 8 ? styles.hide : ''
+              }`}
+            />
           </Link>
         )}
       </div>
     </>
   )
 }
-
-

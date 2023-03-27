@@ -4,12 +4,11 @@ import styles from './searchJob.module.css'
 import { AiOutlineClockCircle } from 'react-icons/ai'
 import { MdWorkHistory } from 'react-icons/md'
 import Link from 'next/link'
-import { useLanguage } from '../../language';
-
+import { useLanguage } from '../../language'
 
 export default function InfoAndSearchLayout(props) {
   const { image, rubrik, titel, info, type, days, link } = props
-  const { text } = useLanguage('swe');
+  const { text } = useLanguage('swe')
 
   return (
     <div className={styles.infoAndSearchContainer}>
@@ -50,7 +49,9 @@ export default function InfoAndSearchLayout(props) {
             <AiOutlineClockCircle
               style={{ color: 'white', fontSize: '1.4rem' }}
             />
-            <p>{text.published}: {days} {text.days}</p>
+            <p>
+              {text.published}: {days} {text.days}
+            </p>
           </div>
         </div>
         <Link className={styles.serachBtn} href={link}>

@@ -65,7 +65,7 @@
   padding: 30px 42px;
 }
 
-.descriptionJob{
+.descriptionJob {
   margin: 22px 0;
   line-height: 19px;
 }
@@ -112,19 +112,19 @@
   font-weight: 700;
 }
 
-.arrowContainer{
+.arrowContainer {
   display: flex;
   justify-content: space-between;
   padding: 23px 42px;
 }
 
-.arrowRightFirstJob{
+.arrowRightFirstJob {
   width: 100%;
   display: flex;
   justify-content: end;
 }
 
-.arrow{
+.arrow {
   color: var(--black);
   font-size: 1rem;
   background-color: var(--white);
@@ -134,6 +134,3 @@
   width: 46px;
   border-radius: 50%;
 }
-
-
-

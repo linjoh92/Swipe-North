@@ -1,21 +1,26 @@
 'use client'
 
-import styles from './menu.module.css';
-import Image from 'next/image';
-import Link from 'next/link';
-import { MdSwipeUp } from 'react-icons/md';
-import { FaHeart } from 'react-icons/fa';
-import { MdOutlineLanguage } from 'react-icons/md';
-import { ImShare2 } from 'react-icons/im';
-import { useLanguage } from '../language';
+import styles from './menu.module.css'
+import Image from 'next/image'
+import Link from 'next/link'
+import { MdSwipeUp } from 'react-icons/md'
+import { FaHeart } from 'react-icons/fa'
+import { MdOutlineLanguage } from 'react-icons/md'
+import { ImShare2 } from 'react-icons/im'
+import { useLanguage } from '../language'
 
 const Menu = () => {
-  const { language, text, toggleLanguage } = useLanguage('swe');
+  const { language, text, toggleLanguage } = useLanguage('swe')
 
   return (
     <div className={styles.menuContainer}>
       <div className={styles.logoContainer}>
-        <Image src="/image/SWIPE_NORTH_logo_black.svg" alt="logo" width={93} height={83} />
+        <Image
+          src="/image/SWIPE_NORTH_logo_black.svg"
+          alt="logo"
+          width={93}
+          height={83}
+        />
       </div>
 
       <div className={styles.menuListConatiner}>
@@ -53,7 +58,10 @@ const Menu = () => {
               />
             </div>
           </div>
-            <Link href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Sakas19/swipe-north.git" className={styles.menuOption}>
+          <Link
+            href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Sakas19/swipe-north.git"
+            className={styles.menuOption}
+          >
             <ImShare2 style={{ fontSize: '1rem' }} />
             <p>{text.share}</p>
           </Link>
@@ -66,12 +74,11 @@ const Menu = () => {
         <p>{text.description2}</p>
       </div>
     </div>
-  );
-};
+  )
+}
 
 const flagOpacity = (language, flag) => {
-  return language === flag ? 1 : 0.3;
-};
+  return language === flag ? 1 : 0.3
+}
 
-export default Menu;
-
+export default Menu
