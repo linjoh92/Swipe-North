@@ -1,0 +1,70 @@
+/* CSS for the first container */
+.firstContainer {
+position: absolute;
+left: 82.31%;
+right: 7.67%;
+top: 3.46%;
+bottom: 91.93%;
+}
+
+/* CSS for the second container */
+.secondContainer {
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+padding: 0px;
+
+position: absolute;
+width: 177.85px;
+height: 150px;
+left: 108px;
+top: 335px;
+}
+
+/* CSS for the third container */
+.thirdContainer {
+position: absolute;
+width: 108px;
+height: 58px;
+left: 30px;
+top: 769px;
+}
+
+/* CSS for the loading container */
+.loadingContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 0px;
+  position: absolute;
+  width: 177.85px;
+  height: 150px;
+  left: 108px;
+  top: 335px;
+}
+
+.container {
+  position: flex;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #333;
+  border-radius: 50%;
+  width: 30px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin-left: 38px; 
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
