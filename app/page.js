@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <section className={styles.homeContainer}>
       <main className={styles.main}>
-        <div>
+        <div className={styles.swipeJobCard}>
           {jobInfo.map((job) => (
             <SwipeCard key={job.id} {...job} />
           ))}

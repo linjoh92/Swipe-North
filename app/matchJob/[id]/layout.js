@@ -4,9 +4,15 @@ import { BsChevronRight } from 'react-icons/bs'
 import { BsChevronLeft } from 'react-icons/bs'
 
 export default function Layout({ children, params }) {
+  const likedJobs = JSON.parse(
+    typeof window !== 'undefined' ? localStorage.getItem('savedJobs') : '0'
+  )
+
   const activeNumber = parseInt(params.id, 10)
   const prevNumber = activeNumber > 1 ? activeNumber - 1 : undefined
-  const nextNumber = activeNumber < 8 ? activeNumber + 1 : undefined
+  const nextNumber =
+    activeNumber < likedJobs.lengt ? activeNumber + 1 : undefined
+  //console.log(likedJobs.lengt)
 
   return (
     <>
@@ -29,7 +35,7 @@ export default function Layout({ children, params }) {
           >
             <BsChevronRight
               className={`${styles.arrow} ${
-                activeNumber === 8 ? styles.hide : ''
+                activeNumber === likedJobs.lengt ? styles.hide : ''
               }`}
             />
           </Link>

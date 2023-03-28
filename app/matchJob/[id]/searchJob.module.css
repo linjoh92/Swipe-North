@@ -58,11 +58,16 @@
   border-radius: 10px;
   display: flex;
   flex-grow: 1;
+  justify-content: space-between;
   color: var(--white);
   flex-direction: column;
-  justify-content: space-between;
+  gap: 20px;
   align-items: center;
   padding: 30px 42px;
+}
+
+.infoConatiner p {
+  margin: 0;
 }
 
 .descriptionJob {

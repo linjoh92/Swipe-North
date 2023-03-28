@@ -19,15 +19,22 @@
 
 .likeBarContainer {
   align-items: center;
+  justify-content: center;
   background-color: var(--black);
   display: flex;
   height: 160px;
-  justify-content: space-between;
-  padding: 0px 60px;
   position: fixed;
   top: calc(100vh - 160px);
   width: 100%;
   z-index: 50;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  max-width: 700px;
 }
 
 .superLikeConatiner {

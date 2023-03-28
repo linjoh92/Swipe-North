@@ -33,12 +33,7 @@ export default function InfoAndSearchLayout(props) {
         </div>
       </div>
       <div className={styles.infoConatiner}>
-        <Image
-          src={`/image/logo_icon_moatin_white.svg`}
-          alt="logo-moatian"
-          width={79}
-          height={34}
-        />
+        <h3>Arbetsbeskrivning </h3>
         <p className={styles.descriptionJob}>{info}</p>
         <div className={styles.iconAndInfoConatainer}>
           <div className={styles.iconAndInfo}>

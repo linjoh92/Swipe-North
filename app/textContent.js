@@ -14,13 +14,15 @@ const languageText = {
     match: 'Matchade jobb',
     searched: 'Sökta jobb',
     swipeMore: 'Swipea mer',
+    clear: 'ta bort alla matchningar',
+    clearApplied: 'ta bort alla sökta jobb',
     //Complite Info/serach page & Modal Quick info
     back: 'Tillbaka',
     published: 'publicerat',
     days: 'dagar sedan',
     apply: 'Sök Jobb',
     error: 'Hittade ingen jobbinfo',
-    backToMatched: 'Tillbaka till Matchade jobb',
+    backMatched: 'Tillbaka till Matchade jobb',
     // jobinfo
     fullTime: 'Heltid',
     partTime: 'Deltid',
@@ -41,6 +43,8 @@ const languageText = {
     match: 'Matched jobs',
     searched: 'Applied jobs',
     swipeMore: 'Swipe more',
+    clear: 'delete all matches',
+    clearApplied: 'delete all applied jobs',
     //Complite Info/serach page & error page - Job not found
     back: 'Back',
     published: 'published',

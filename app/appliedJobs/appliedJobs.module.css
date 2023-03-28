@@ -10,6 +10,16 @@
   margin: 12px;
 }
 
+.listContainer {
+  background-color: var(--lightgrey);
+  height: 100%;
+  width: 100%;
+  min-height: calc(100vh - 124px);
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
 .matchadeListNavBar {
   display: flex;
   justify-content: space-between;
@@ -81,4 +91,19 @@
   display: flex;
   align-items: center;
   gap: 6px;
+}
+
+.clearMatches {
+  display: flex;
+  margin: 22px;
+  color: var(--darkgrey);
+  justify-content: center;
+  font-weight: 500;
+  align-items: end;
+  text-transform: uppercase;
+  flex-grow: 1;
+}
+
+.clearButton {
+  cursor: pointer;
 }

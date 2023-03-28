@@ -8,7 +8,7 @@ const jobInfo = [
     type: 'Deltid',
     days: '4',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser?q=skellefte%C3%A5',
-    lang: 'swe',
+    id: '1',
   },
   {
     number: '2',
@@ -19,7 +19,7 @@ const jobInfo = [
     type: 'Heltid',
     days: '10',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser?q=skellefte%C3%A5',
-    lang: 'swe',
+    id: '2',
   },
   {
     number: '3',
@@ -30,7 +30,7 @@ const jobInfo = [
     type: 'Timanställning',
     days: '20',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser?q=skellefte%C3%A5',
-    lang: 'swe',
+    id: '3',
   },
   {
     number: '4',
@@ -41,7 +41,7 @@ const jobInfo = [
     type: 'Heltid',
     days: '10',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser?q=skellefte%C3%A5',
-    lang: 'swe',
+    id: '4',
   },
   {
     number: '5',
@@ -52,7 +52,7 @@ const jobInfo = [
     type: 'Deltid',
     days: '10',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser?q=skellefte%C3%A5',
-    lang: 'swe',
+    id: '5',
   },
   {
     number: '6',
@@ -63,7 +63,7 @@ const jobInfo = [
     type: 'Heltid',
     days: '10',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser?q=skellefte%C3%A5',
-    lang: 'swe',
+    id: '6',
   },
   {
     number: '7',
@@ -74,7 +74,7 @@ const jobInfo = [
     type: 'Deltid',
     days: '10',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser?q=skellefte%C3%A5',
-    lang: 'swe',
+    id: '7',
   },
   {
     number: '8',
@@ -85,7 +85,7 @@ const jobInfo = [
     type: 'Deltid',
     days: '10',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser?q=skellefte%C3%A5',
-    lang: 'swe',
+    id: '8',
   },
 ]
 

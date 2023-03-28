@@ -3,15 +3,22 @@
 import styles from './appliedJobs.module.css'
 import AppliedJobs from './appliedJobs'
 import Link from 'next/link'
-import jobInfo from '../jobAPI'
 import { useLanguage } from '../language'
+import { useState } from 'react'
 
 export default function matchJobList() {
-  const appliedJobs = jobInfo.slice(5, 8)
   const { text } = useLanguage('swe')
+  const [appliedJobs, setAppliedJobs] = useState(
+    JSON.parse(localStorage.getItem('appliedJobs')) || []
+  )
+
+  const handleClear = () => {
+    localStorage.removeItem('appliedJobs')
+    setAppliedJobs([])
+  }
 
   return (
-    <div style={{ backgroundColor: '#e6e6e6', height: '100%' }}>
+    <div className={styles.listContainer}>
       <div className={styles.matchListContainer}>
         <div className={styles.matchadeListNavBar}>
           <Link href={'/matchJob'}>
@@ -23,6 +30,11 @@ export default function matchJobList() {
           {appliedJobs.map((match) => (
             <AppliedJobs key={match.id} {...match} />
           ))}
+        </div>
+        <div className={styles.clearMatches}>
+          <div className={styles.clearButton} onClick={handleClear}>
+            {text.clearApplied}
+          </div>
         </div>
       </div>
     </div>
