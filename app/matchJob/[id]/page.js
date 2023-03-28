@@ -3,13 +3,12 @@ import InfoAndSearchLayout from './infoAndSearchLayout'
 import styles from './searchJob.module.css'
 import Link from 'next/link'
 import { useLanguage } from '../../language'
-
-//const shiftedJobInfo = [null, ...likedJobs.slice()] //för att jobbAPI ska börja på 1 ist för 0
+import Navigation from './navigation'
 
 export default function JobInfoAndSearch({ params: { id } }) {
   const likedJobs = JSON.parse(localStorage.getItem('savedJobs')) || []
-  const shiftedJobInfo = [null, ...likedJobs.slice()] //för att jobbAPI ska börja på 1 ist för 0
-  const job = shiftedJobInfo[id]
+  const job = likedJobs.find((job) => job.id === id)
+
   const { text } = useLanguage('swe')
 
   if (!job) {
@@ -22,14 +21,17 @@ export default function JobInfoAndSearch({ params: { id } }) {
   }
 
   return (
-    <InfoAndSearchLayout
-      image={job.image}
-      rubrik={job.rubrik}
-      titel={job.titel}
-      info={job.info}
-      type={job.type}
-      days={job.days}
-      link={job.link}
-    />
+    <>
+      <InfoAndSearchLayout
+        imgUrl={job.imgUrl}
+        companyName={job.companyName}
+        jobTitle={job.jobTitle}
+        shortInfo={job.shortInfo}
+        type={job.type}
+        days={job.days}
+        link={job.link}
+      />
+      <Navigation id={job.id} />
+    </>
   )
 }

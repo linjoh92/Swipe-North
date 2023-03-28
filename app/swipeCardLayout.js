@@ -12,7 +12,8 @@ import { atom, useAtom } from 'jotai'
 const likedJobsAtom = atom([])
 
 export default function SwipeCard(props) {
-  const { id, image, rubrik, titel, info, days, type, link } = props
+  const { id, imgUrl, companyName, jobTitle, shortInfo, days, type, link } =
+    props
   const [showModal, setShowModal] = useState(false)
   const { text } = useLanguage('swe')
   const [likedJobs, setLikedJobs] = useAtom(likedJobsAtom)
@@ -24,7 +25,16 @@ export default function SwipeCard(props) {
 
   const isJobLiked = likedJobs.some((job) => job.id === id)
   const handleLike = () => {
-    const newJob = { id, image, rubrik, titel, info, days, type, link }
+    const newJob = {
+      id,
+      imgUrl,
+      companyName,
+      jobTitle,
+      shortInfo,
+      days,
+      type,
+      link,
+    }
     if (isJobLiked) {
       const newLikedJobs = likedJobs.filter((job) => job.id !== id)
       setLikedJobs(newLikedJobs)
@@ -44,17 +54,17 @@ export default function SwipeCard(props) {
         <>
           <motion.div
             className={styles.overlay}
-            style={{ backgroundImage: `url(${image})` }}
+            style={{ backgroundImage: `url(${imgUrl})` }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
             onClick={() => setShowModal(false)}
           />
           <Modal
-            image={image}
-            rubrik={rubrik}
-            titel={titel}
-            info={info}
+            imgUrl={imgUrl}
+            companyName={companyName}
+            jobTitle={jobTitle}
+            shortInfo={shortInfo}
             days={days}
             id={id}
             type={type}
@@ -67,7 +77,7 @@ export default function SwipeCard(props) {
       <div className={styles.swipeCardConatiner}>
         <div
           className={styles.swipeCard}
-          style={{ backgroundImage: `url(${image})` }}
+          style={{ backgroundImage: `url(${imgUrl})` }}
         >
           <div
             className={isLiked ? styles.likeButtonLiked : styles.likeButton}
@@ -104,10 +114,10 @@ export default function SwipeCard(props) {
 
           <div className={styles.infoConatiner} onClick={handleClick}>
             <h2>
-              {rubrik}
+              {companyName}
               <MdInfoOutline />
             </h2>
-            <p>{titel}</p>
+            <p>{jobTitle}</p>
           </div>
         </div>
       </div>

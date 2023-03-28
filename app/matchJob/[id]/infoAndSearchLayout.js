@@ -7,7 +7,7 @@ import Link from 'next/link'
 import { useLanguage } from '../../language'
 
 export default function InfoAndSearchLayout(props) {
-  const { image, rubrik, titel, info, type, days, link } = props
+  const { imgUrl, companyName, jobTitle, shortInfo, type, days, link } = props
   const { text } = useLanguage('swe')
 
   return (
@@ -20,21 +20,21 @@ export default function InfoAndSearchLayout(props) {
         </div>
         <div className={styles.titelAndImg}>
           <Image
-            src={image}
+            src={imgUrl}
             alt="photo-job"
             width={400}
             height={100}
             className={styles.image}
           />
           <div className={styles.rubrikTitelConatiner}>
-            <h2>{rubrik}</h2>
-            <p>{titel}</p>
+            <h2>{companyName}</h2>
+            <p>{jobTitle}</p>
           </div>
         </div>
       </div>
       <div className={styles.infoConatiner}>
         <h3>Arbetsbeskrivning </h3>
-        <p className={styles.descriptionJob}>{info}</p>
+        <p className={styles.descriptionJob}>{shortInfo}</p>
         <div className={styles.iconAndInfoConatainer}>
           <div className={styles.iconAndInfo}>
             <MdWorkHistory style={{ color: 'white', fontSize: '1.4rem' }} />

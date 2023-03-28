@@ -23,18 +23,7 @@ export default function matchJobList() {
   }
 
   return (
-    <div
-      className={styles.listContainer}
-      style={{
-        backgroundColor: '#e6e6e6',
-        height: '100%',
-        top: '100px',
-        minHeight: 'calc(100vh - 124px)',
-        position: 'absolute',
-        left: '0',
-        right: '0',
-      }}
-    >
+    <div className={styles.listContainer}>
       <div className={styles.matchListContainer}>
         <div className={styles.matchadeListNavBar}>
           <p className={styles.matchedNavBar}>{text.match}</p>

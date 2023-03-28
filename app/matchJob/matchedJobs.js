@@ -6,7 +6,7 @@ import { FaTrashAlt } from 'react-icons/fa'
 import { motion, animate } from 'framer-motion'
 
 export default function MatchedJobs(props) {
-  const { id, image, rubrik, titel, type, updateJobList } = props
+  const { id, imgUrl, companyName, jobTitle, type, updateJobList } = props
 
   const handleClick = () => {
     animate({ right: 130 })
@@ -40,7 +40,7 @@ export default function MatchedJobs(props) {
       dragConstraints={{ left: -130, right: 0, dragElastic: 0.2 }}
     >
       <Image
-        src={image}
+        src={imgUrl}
         alt="jobb"
         width={100}
         height={100}
@@ -48,9 +48,9 @@ export default function MatchedJobs(props) {
       />
       <div className={styles.textConatiner}>
         <Link href={`/matchJob/${id}`}>
-          <h2>{rubrik}</h2>
+          <h2>{companyName}</h2>
         </Link>
-        <p>{titel}</p>
+        <p>{jobTitle}</p>
         <p>{type}</p>
       </div>
 
