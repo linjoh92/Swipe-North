@@ -5,20 +5,22 @@ import { BsChevronLeft } from 'react-icons/bs'
 
 export default function Navigation({ id }) {
   const likedJobs = JSON.parse(localStorage.getItem('savedJobs')) || []
-
   const activeNumber = parseInt(id, 10)
-  const prevNumber = activeNumber > 1 ? activeNumber - 1 : undefined
-  const nextNumber =
-    activeNumber < likedJobs.length ? activeNumber + 1 : undefined
+
+  const activeIndex = likedJobs.findIndex(
+    (job) => parseInt(job.id, 10) === activeNumber
+  )
+  const prevNumber = likedJobs[activeIndex - 1]
+  const nextNumber = likedJobs[activeIndex + 1]
 
   return (
     <>
       <div className={styles.arrowContainer}>
         {prevNumber !== undefined && (
-          <Link href={`/matchJob/${prevNumber}`}>
+          <Link href={`/matchJob/${prevNumber.id}`}>
             <BsChevronLeft
               className={`${styles.arrow} ${
-                activeNumber === 1 ? styles.show : ''
+                activeNumber === 0 ? styles.show : ''
               }`}
             />
           </Link>
@@ -26,7 +28,7 @@ export default function Navigation({ id }) {
 
         {nextNumber !== undefined && (
           <Link
-            href={`/matchJob/${nextNumber}`}
+            href={`/matchJob/${nextNumber.id}`}
             className={styles.arrowRightFirstJob}
           >
             <BsChevronRight

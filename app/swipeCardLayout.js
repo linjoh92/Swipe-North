@@ -3,11 +3,11 @@ import styles from './page.module.css'
 import { useState } from 'react'
 import { MdInfoOutline } from 'react-icons/md'
 import { BsChevronDown } from 'react-icons/bs'
-import { FaHeart } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 import { useLanguage } from './language'
 import Modal from './modal.jobInfo'
 import { atom, useAtom } from 'jotai'
+import LikeButton from './likeButton'
 
 const likedJobsAtom = atom([])
 
@@ -43,10 +43,7 @@ export default function SwipeCard(props) {
       setLikedJobs([...likedJobs, newJob])
       localStorage.setItem('savedJobs', JSON.stringify([...likedJobs, newJob]))
     }
-    setIsLiked(!isJobLiked)
   }
-
-  const [isLiked, setIsLiked] = useState(isJobLiked)
 
   return (
     <div className={styles.swipeContainer}>
@@ -79,23 +76,7 @@ export default function SwipeCard(props) {
           className={styles.swipeCard}
           style={{ backgroundImage: `url(${imgUrl})` }}
         >
-          <div
-            className={isLiked ? styles.likeButtonLiked : styles.likeButton}
-            onClick={handleLike}
-          >
-            <span>
-              {isLiked ? (
-                <FaHeart fill="#ffffff" />
-              ) : (
-                <FaHeart
-                  fill="none"
-                  stroke="#ffffff"
-                  strokeWidth="40"
-                  style={{ width: '35px' }}
-                />
-              )}
-            </span>
-          </div>
+          <LikeButton isLiked={isJobLiked} onClick={handleLike} />
 
           <motion.div
             style={{ width: '100%', justifyContent: 'center' }}
