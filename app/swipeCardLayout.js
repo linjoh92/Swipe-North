@@ -79,7 +79,7 @@ export default function SwipeCard(props) {
           <LikeButton isLiked={isJobLiked} onClick={handleLike} />
 
           <motion.div
-            style={{ width: '100%', justifyContent: 'center' }}
+            className={styles.uppArrow}
             animate={{ y: -7 }}
             transition={{ type: 'spring', repeat: Infinity, repeatDelay: 2 }}
           >

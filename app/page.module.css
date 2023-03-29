@@ -52,6 +52,12 @@
   padding: 20px;
 }
 
+.uppArrow {
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
 .infoConatiner {
   font-size: 20px;
   display: flex;
@@ -139,4 +145,5 @@
 .likeButtonLiked,
 .likeButton {
   cursor: pointer;
+  z-index: 20;
 }

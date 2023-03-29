@@ -3,14 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { AiFillCheckCircle } from 'react-icons/ai'
 import { FaTrashAlt } from 'react-icons/fa'
-import { motion, animate } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 export default function MatchedJobs(props) {
   const { id, imgUrl, companyName, jobTitle, type, updateJobList } = props
-
-  const handleClick = () => {
-    animate({ right: 130 })
-  }
 
   const handleDelete = () => {
     const savedJobs = JSON.parse(localStorage.getItem('savedJobs'))
@@ -37,7 +33,7 @@ export default function MatchedJobs(props) {
       className={styles.matchedContainer}
       whileHover={{ scale: 1.02 }}
       drag="x"
-      dragConstraints={{ left: -130, right: 0, dragElastic: 0.2 }}
+      dragConstraints={{ left: -140, right: 0, dragElastic: 0.2 }}
     >
       <Image
         src={imgUrl}
@@ -54,10 +50,7 @@ export default function MatchedJobs(props) {
         <p>{type}</p>
       </div>
 
-      <motion.div
-        className={styles.deliteOrAppliedConatiner}
-        onClick={handleClick()}
-      >
+      <motion.div className={styles.deliteOrAppliedConatiner}>
         <motion.div
           className={styles.delite}
           whileHover={{ color: '#721904' }}
