@@ -10,7 +10,7 @@ import { ImShare2 } from 'react-icons/im'
 import { useEffect, useState } from 'react'
 import languageText from '../textContent'
 
-const Menu = ({ menuOpen, setMenuOpen, setMenuIcon }) => {
+const Menu = ({ setMenuOpen, setMenuIcon }) => {
   const [language, setLanguage] = useState('swe')
   const [text, setText] = useState('')
 

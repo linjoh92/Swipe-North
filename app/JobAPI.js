@@ -25,7 +25,7 @@ const jobInfo = [
     type: 'Heltid',
   },
   {
-    category: 'Data/it',
+    category: 'Administration',
     companyName: 'Skellefteå Lasarett',
     days: '20',
     id: '3',
@@ -37,7 +37,7 @@ const jobInfo = [
     type: 'Timanställning',
   },
   {
-    category: 'Data/it',
+    category: 'Administration',
     companyName: 'Skellefteå taxi',
     days: '10',
     id: '4',
@@ -61,7 +61,7 @@ const jobInfo = [
     type: 'Deltid',
   },
   {
-    category: 'Data/it',
+    category: 'Administration',
     companyName: 'Swecon',
     days: '10',
     id: '6',
@@ -73,7 +73,7 @@ const jobInfo = [
     type: 'Heltid',
   },
   {
-    category: 'Data/it',
+    category: 'Administration',
     companyName: 'Skellefteå Kommun',
     days: '10',
     id: '7',

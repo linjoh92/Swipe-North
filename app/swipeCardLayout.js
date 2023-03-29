@@ -12,7 +12,7 @@ import LikeButton from './likeButton'
 const likedJobsAtom = atom([])
 
 export default function SwipeCard(props) {
-  const { id, imgUrl, companyName, jobTitle, shortInfo, days, type, link } =
+  const { category, id, imgUrl, companyName, jobTitle, shortInfo, days, type, link } =
     props
   const [showModal, setShowModal] = useState(false)
   const { text } = useLanguage('swe')
@@ -29,6 +29,7 @@ export default function SwipeCard(props) {
       id,
       imgUrl,
       companyName,
+      category,
       jobTitle,
       shortInfo,
       days,
