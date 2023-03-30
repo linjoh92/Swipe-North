@@ -1,9 +1,9 @@
 'use client'
 import { useState } from 'react'
-import LikeBar from './likeBar'
+import LikeBar from './LikeBar'
 import styles from './page.module.css'
 import SwipeCard from './swipeCardLayout'
-import jobInfo from './jobAPI'
+import jobInfo from './JobAPI'
 
 export default function Home() {
   const [currentJobIndex, setCurrentJobIndex] = useState(0)
