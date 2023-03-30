@@ -1,6 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
-import Header from './Header'
+import Header from './header'
 
 export const metadata = {
   title: 'Swipe North',

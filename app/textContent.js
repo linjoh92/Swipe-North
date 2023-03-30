@@ -28,6 +28,8 @@ const languageText = {
     fullTime: 'Heltid',
     partTime: 'Deltid',
     hourly: 'Timanställd',
+    //home
+    area: 'Yrkesområde',
   },
   eng: {
     //menu
@@ -58,6 +60,8 @@ const languageText = {
     fullTime: 'Full-time',
     partTime: 'Part-time',
     hourly: 'Hourly employee',
+    //home
+    area: 'Professional area',
   },
 }
 

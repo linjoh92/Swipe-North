@@ -9,8 +9,17 @@ import styles from './page.module.css'
 import { useState } from 'react'
 
 export default function SwipeCard(props) {
-  const { id, imgUrl, companyName, jobTitle, shortInfo, days, type, link } =
-    props
+  const {
+    category,
+    id,
+    imgUrl,
+    companyName,
+    jobTitle,
+    shortInfo,
+    days,
+    type,
+    link,
+  } = props
   const { text } = useLanguage('swe')
   const [showModal, setShowModal] = useState(false)
 
@@ -80,13 +89,14 @@ export default function SwipeCard(props) {
           </motion.div>
 
           <div className={styles.infoConatiner} onClick={handleClick}>
-            <h2>
-              {companyName}
-              <MdInfoOutline
-                style={{ fontSize: '1rem', height: '100%', maxHeight: '25px' }}
-              />
-            </h2>
+            <div className={styles.jobTitelContainer}>
+              <h2>{companyName}</h2>
+              <MdInfoOutline />
+            </div>
             <p>{jobTitle}</p>
+            <p style={{ fontWeight: '500', fontSize: '1rem' }}>
+              {text.area} : {category}
+            </p>
           </div>
         </div>
       </TinderCard>

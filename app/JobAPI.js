@@ -1,18 +1,19 @@
 const jobInfo = [
   {
-    category: 'administration',
+    category: 'Administration',
     companyName: 'Wikan Personal Botnia AB',
     days: '6',
     id: '1',
     imgUrl: '/./jobImage/administration.png',
     jobTitle: 'Marketing Administrator for Skellefteå Kraft',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27330840',
-    shortInfo: 'Marketing Administrator position at Skellefteå Kraft.',
+    shortInfo:
+      'Marketing Administrator position at Skellefteå Kraft.Marketing Administrator position at Skellefteå Kraft.',
     type: 'Heltid',
   },
   {
-    category: 'administration',
-    companyName: 'Skellefteå kommun, Utbildning och arbetsmarknad',
+    category: 'Administration',
+    companyName: 'Skellefteå kommun',
     days: '12',
     id: '2',
     imgUrl: '/./jobImage/teacher.png',
@@ -22,7 +23,7 @@ const jobInfo = [
     type: 'Heltid',
   },
   {
-    category: 'technical',
+    category: 'Administration',
     companyName: 'Ikett Personalpartner AB',
     days: '15',
     id: '3',
@@ -33,7 +34,7 @@ const jobInfo = [
     type: 'Heltid',
   },
   {
-    category: 'education',
+    category: 'Administration',
     companyName: 'Praktiska Gymnasiet',
     days: '18',
     id: '4',
@@ -44,8 +45,8 @@ const jobInfo = [
     type: 'Heltid',
   },
   {
-    category: 'administration',
-    companyName: 'FÖRSAMLINGSEXPEDITIONEN',
+    category: 'Administration',
+    companyName: 'Församling Expeditionen',
     days: '18',
     id: '5',
     imgUrl: '/./jobImage/parishhost.png',
@@ -56,8 +57,8 @@ const jobInfo = [
     type: 'Heltid',
   },
   {
-    category: 'community',
-    companyName: 'FÖRSAMLINGSEXPEDITIONEN',
+    category: 'Administration',
+    companyName: 'Församling Expeditionen',
     days: '18',
     id: '6',
     imgUrl: '/./jobImage/parishhost.png',
@@ -68,7 +69,7 @@ const jobInfo = [
     type: 'Heltid',
   },
   {
-    category: 'management',
+    category: 'Administration',
     companyName: 'Region Västerbotten, Intern service',
     days: '20',
     id: '7',
@@ -80,7 +81,7 @@ const jobInfo = [
     type: 'Heltid',
   },
   {
-    category: 'management',
+    category: 'Administration',
     companyName: 'Skellefteå kommun, Individ- och familjeomsorg',
     days: '20',
     id: '8',
@@ -91,7 +92,7 @@ const jobInfo = [
     type: 'Heltid',
   },
   {
-    category: 'technical',
+    category: 'Data/it',
     companyName: 'ASSA ABLOY Industrial Sverige AB',
     days: '22',
     id: '9',
@@ -103,7 +104,7 @@ const jobInfo = [
     type: 'Heltid',
   },
   {
-    category: 'IT',
+    category: 'Data/it',
     companyName: 'Minnovation international AB',
     days: '56',
     id: '10',
@@ -114,7 +115,7 @@ const jobInfo = [
     type: 'Heltid',
   },
   {
-    category: 'data/it',
+    category: 'Data/it',
     companyName: 'Skelleftea kommun',
     days: '11',
     id: '11',
@@ -196,7 +197,7 @@ const jobInfo = [
     type: 'Heltid',
   },
   {
-    category: 'Logistics',
+    category: 'Transport',
     companyName: 'Postnord',
     days: '7',
     id: '18',
@@ -220,7 +221,7 @@ const jobInfo = [
     type: 'Heltid',
   },
   {
-    category: 'Logistics',
+    category: 'Transport',
     companyName: 'Konsultia',
     days: '13',
     id: '20',
@@ -268,7 +269,7 @@ const jobInfo = [
     type: 'Heltid',
   },
   {
-    category: 'Logistics',
+    category: 'Transport',
     companyName: 'StudentConsulting',
     days: '8',
     id: '24',
@@ -276,11 +277,11 @@ const jobInfo = [
     jobTitle: 'Terminal worker',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27325699',
     shortInfo:
-      "Looking for an extra job? We are looking for terminal workers for one of Sweden's largest companies in logistics and distribution!",
+      "Looking for an extra job? We are looking for terminal workers for one of Sweden's largest companies in Transport and distribution!",
     type: 'Heltid',
   },
   {
-    category: 'Logistics',
+    category: 'Transport',
     companyName: 'Blomsterlandet',
     days: '13',
     id: '25',
@@ -292,7 +293,7 @@ const jobInfo = [
     type: 'Heltid',
   },
   {
-    category: 'Logistics',
+    category: 'Transport',
     companyName: 'Blomsterlandet',
     days: '13',
     id: '26',

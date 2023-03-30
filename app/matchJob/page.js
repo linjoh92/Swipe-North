@@ -30,6 +30,8 @@ export default function matchJobList() {
   const handleClear = () => {
     localStorage.removeItem('savedJobs')
     localStorage.removeItem('superLike')
+    localStorage.removeItem('like')
+    localStorage.removeItem('dislike')
     setLikedJobs([])
     setSuperLike([])
   }

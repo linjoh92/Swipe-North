@@ -35,7 +35,7 @@ export default function Modal(props) {
         <h2>{companyName}</h2>
         <p>{jobTitle}</p>
       </div>
-      <p>{shortInfo.split(' ').slice(0, 25).join(' ')}...</p>
+      <p>{shortInfo.split('. ').slice(0, 2).join('. ')}</p>
 
       <div className={styles.iconAndInfoConatainer}>
         <div className={styles.iconAndInfo}>

@@ -4,25 +4,22 @@ import { BsChevronRight } from 'react-icons/bs'
 import { BsChevronLeft } from 'react-icons/bs'
 
 export default function Navigation({ id }) {
-  const superLike = JSON.parse(localStorage.getItem('superLike')) || []
-  const savedJobs = JSON.parse(localStorage.getItem('savedJobs')) || []
+  const likedJobs = JSON.parse(localStorage.getItem('savedJobs')) || []
+  const superLikedJobs = JSON.parse(localStorage.getItem('superLike')) || []
 
-  // calculate the length of superLike array
-  const superLikeLength = superLike.length
+  // Combine the superLikedJobs and likedJobs arrays
+  const allJobs = superLikedJobs.concat(likedJobs)
+
+  // Sort the combined array by the date the job was saved
+  allJobs.sort((a, b) => new Date(b.dateSaved) - new Date(a.dateSaved))
 
   const activeNumber = parseInt(id, 10)
 
-  // adjust the index to account for the length of superLike
-  const activeIndex =
-    activeNumber < superLikeLength
-      ? activeNumber
-      : activeNumber - superLikeLength
-
-  // determine if the active job belongs to superLike or savedJobs
-  const activeArray = activeNumber < superLikeLength ? superLike : savedJobs
-
-  const prevNumber = activeArray[activeIndex - 1]
-  const nextNumber = activeArray[activeIndex + 1]
+  const activeIndex = allJobs.findIndex(
+    (job) => parseInt(job.id, 10) === activeNumber
+  )
+  const prevNumber = allJobs[activeIndex - 1]
+  const nextNumber = allJobs[activeIndex + 1]
 
   return (
     <>
@@ -39,16 +36,12 @@ export default function Navigation({ id }) {
 
         {nextNumber !== undefined && (
           <Link
-            href={`/matchJob/${
-              activeNumber < superLikeLength
-                ? nextNumber.id
-                : superLikeLength + nextNumber.id // adjust the id to account for the length of superLike
-            }`}
+            href={`/matchJob/${nextNumber.id}`}
             className={styles.arrowRightFirstJob}
           >
             <BsChevronRight
               className={`${styles.arrow} ${
-                activeIndex === activeArray.length - 1 ? styles.hide : ''
+                nextNumber === allJobs.length ? styles.hide : ''
               }`}
             />
           </Link>
