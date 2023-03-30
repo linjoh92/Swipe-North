@@ -1,9 +1,14 @@
-'use client'
 import { useState } from 'react'
 import LikeBar from './LikeBar'
 import styles from './page.module.css'
 import SwipeCard from './swipeCardLayout'
 import jobInfo from './JobAPI'
+import dynamic from 'next/dynamic';
+
+const ClientSideComponent = dynamic(
+  () => import('./ClientSideComponent'),
+  { ssr: false }
+);
 
 export default function Home() {
   const [currentJobIndex, setCurrentJobIndex] = useState(0)
@@ -48,7 +53,6 @@ export default function Home() {
     setCurrentJobIndex((prevIndex) => (prevIndex + 1) % filteredJobs.length)
   }
 
-  // Helper function to shuffle jobAPI array randomly
   function shuffle(array) {
     let currentIndex = array.length,
       temporaryValue,
@@ -77,6 +81,7 @@ export default function Home() {
             />
           )}
         </div>
+        <ClientSideComponent onSwipe={handleSwipe} />
       </main>
       <LikeBar
         onLike={() => handleSwipe('up', false)}
