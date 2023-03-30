@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import LikeBar from './components/LikeBar.js'
 import styles from './page.module.css'
 import SwipeCard from './swipeCardLayout.js'
-import jobInfo from './JobAPI.js'
+import jobInfo from './components/JobAPI.js'
 
 export default function Home() {
   const [currentJobIndex, setCurrentJobIndex] = useState(0)
