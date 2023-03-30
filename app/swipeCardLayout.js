@@ -1,5 +1,4 @@
 'use client'
-import TinderCard from 'react-tinder-card'
 import { motion } from 'framer-motion'
 import { MdInfoOutline } from 'react-icons/md'
 import { BsChevronDown } from 'react-icons/bs'
@@ -7,6 +6,13 @@ import { useLanguage } from './language'
 import Modal from './modal.jobInfo'
 import styles from './page.module.css'
 import { useState } from 'react'
+import dynamic from 'next/dynamic'
+
+
+const TinderCard = dynamic(() => import('react-tinder-card'), {
+  ssr: false,
+})
+
 
 export default function SwipeCard(props) {
   const { id, imgUrl, companyName, jobTitle, shortInfo, days, type, link } =

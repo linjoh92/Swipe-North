@@ -10,8 +10,9 @@ export const useLanguage = () => {
   const [text, setText] = useState('')
 
   useEffect(() => {
-    language === 'swe' ? setText(languageText.swe) : setText(languageText.eng)
+    setText(language === 'swe' ? languageText.swe : languageText.eng)
   }, [language])
+  
 
   const toggleLanguage = () => {
     const newLanguage = language === 'swe' ? 'eng' : 'swe'

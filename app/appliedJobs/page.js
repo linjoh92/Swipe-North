@@ -6,11 +6,15 @@ import Link from 'next/link'
 import { useLanguage } from '../language'
 import { useState } from 'react'
 
-export default function matchJobList() {
+export default function MatchJobList() {
   const { text } = useLanguage('swe')
-  const [appliedJobs, setAppliedJobs] = useState(
-    JSON.parse(localStorage.getItem('appliedJobs')) || []
-  )
+  const [appliedJobs, setAppliedJobs] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return JSON.parse(localStorage.getItem('appliedJobs')) || []
+    } else {
+      return []
+    }
+  })
 
   const handleClear = () => {
     localStorage.removeItem('appliedJobs')

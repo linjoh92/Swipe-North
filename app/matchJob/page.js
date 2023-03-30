@@ -1,38 +1,46 @@
-/* eslint-disable react-hooks/rules-of-hooks */
-'use client'
+'use client';
+import styles from './matchJob.module.css';
+import Link from 'next/link';
+import { useLanguage } from '../language';
+import { useState } from 'react';
+import MatchedJobs from './matchedJobs';
+import SuperLikedJobs from './superLikeJob';
 
-import styles from './matchJob.module.css'
-import MatchedJobs from './matchedJobs'
-import SuperLikedJobs from './superLikeJob'
-import Link from 'next/link'
-import { useLanguage } from '../language'
-import React, { useState } from 'react'
+export default function MatchJobList() {
+  const { text } = useLanguage('swe');
 
-export default function matchJobList() {
-  const { text } = useLanguage('swe')
+  const [likedJobs, setLikedJobs] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return JSON.parse(localStorage.getItem('savedJobs')) || [];
+    } else {
+      return [];
+    }
+  });
 
-  const [likedJobs, setLikedJobs] = useState(
-    JSON.parse(localStorage.getItem('savedJobs')) || []
-  )
-
-  const [superLike, setSuperLike] = useState(
-    JSON.parse(localStorage.getItem('superLike')) || []
-  )
+  const [superLike, setSuperLike] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const superLikeData = JSON.parse(localStorage.getItem('superLike'));
+      return superLikeData !== null ? superLikeData : [];
+    } else {
+      return [];
+    }
+  });
+  
 
   const updateJobList = (jobs) => {
-    setLikedJobs(jobs)
-  }
+    setLikedJobs(jobs);
+  };
 
   const updateSuperLikeList = (jobs) => {
-    setSuperLike(jobs)
-  }
+    setSuperLike(jobs);
+  };
 
   const handleClear = () => {
-    localStorage.removeItem('savedJobs')
-    localStorage.removeItem('superLike')
-    setLikedJobs([])
-    setSuperLike([])
-  }
+    localStorage.removeItem('savedJobs');
+    localStorage.removeItem('superLike');
+    setLikedJobs([]);
+    setSuperLike([]);
+  };
 
   return (
     <div className={styles.listContainer}>
@@ -43,23 +51,25 @@ export default function matchJobList() {
             <p className={styles.searchedNavBar}>{text.searched}</p>
           </Link>
         </div>
-        <div>
-          {superLike.map((superLike) => (
-            <SuperLikedJobs
-              key={superLike.id}
-              {...superLike}
-              updateSuperLikeList={updateSuperLikeList}
-            />
-          ))}
-        </div>
-        <div>
-          {likedJobs.map((match) => (
-            <MatchedJobs
-              key={match.id}
-              {...match}
-              updateJobList={updateJobList}
-            />
-          ))}
+        <div className={styles.listContent}>
+          <div>
+            {superLike.map((superLikeItem) => (
+              <SuperLikedJobs
+                key={superLikeItem.id}
+                {...superLikeItem}
+                updateSuperLikeList={updateSuperLikeList}
+              />
+            ))}
+          </div>
+          <div>
+            {likedJobs.map((match) => (
+              <MatchedJobs
+                key={match.id}
+                {...match}
+                updateJobList={updateJobList}
+              />
+            ))}
+          </div>
         </div>
         <div className={styles.clearMatches}>
           <div className={styles.clearButton} onClick={handleClear}>
@@ -68,5 +78,5 @@ export default function matchJobList() {
         </div>
       </div>
     </div>
-  )
+  );
 }

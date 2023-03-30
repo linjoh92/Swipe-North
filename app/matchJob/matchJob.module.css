@@ -20,6 +20,12 @@
   right: 0;
 }
 
+.listContent {
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+
 .matchadeListNavBar {
   display: flex;
   justify-content: space-between;
@@ -80,7 +86,7 @@
   color: var(--darkgrey);
   justify-content: center;
   font-weight: 500;
-  align-items: end;
+  align-items: flex-end;
   text-transform: uppercase;
   flex-grow: 1;
 }
