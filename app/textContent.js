@@ -18,7 +18,8 @@ const languageText = {
     clearApplied: 'ta bort alla sökta jobb',
     //Complite Info/serach page & Modal Quick info
     back: 'Tillbaka',
-    published: 'publicerat',
+    jobDescription: 'Arbetsbeskrivning',
+    published: 'Publicerat',
     days: 'dagar sedan',
     apply: 'Sök Jobb',
     error: 'Hittade ingen jobbinfo',
@@ -47,7 +48,8 @@ const languageText = {
     clearApplied: 'delete all applied jobs',
     //Complite Info/serach page & error page - Job not found
     back: 'Back',
-    published: 'published',
+    jobDescription: 'Job description',
+    published: 'Published',
     days: 'days ago',
     apply: 'Apply Now',
     error: 'No job info found',

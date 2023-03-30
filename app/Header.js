@@ -42,6 +42,7 @@ const Header = () => {
           alt="logo"
           width={78}
           height={42}
+          priority={true}
         />
       </Link>
       <div className={styles.headerIconContainer}>

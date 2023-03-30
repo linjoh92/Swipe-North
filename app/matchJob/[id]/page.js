@@ -6,7 +6,9 @@ import { useLanguage } from '../../language'
 import Navigation from './navigation'
 
 export default function JobInfoAndSearch({ params: { id } }) {
-  const likedJobs = JSON.parse(localStorage.getItem('savedJobs')) || []
+  const likedJobs = (
+    JSON.parse(localStorage.getItem('savedJobs')) || []
+  ).concat(JSON.parse(localStorage.getItem('superLike')) || [])
   const job = likedJobs.find((job) => job.id === id)
 
   const { text } = useLanguage('swe')

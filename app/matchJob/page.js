@@ -3,23 +3,35 @@
 
 import styles from './matchJob.module.css'
 import MatchedJobs from './matchedJobs'
+import SuperLikedJobs from './superLikeJob'
 import Link from 'next/link'
 import { useLanguage } from '../language'
 import React, { useState } from 'react'
 
 export default function matchJobList() {
   const { text } = useLanguage('swe')
+
   const [likedJobs, setLikedJobs] = useState(
     JSON.parse(localStorage.getItem('savedJobs')) || []
   )
 
-  const handleClear = () => {
-    localStorage.removeItem('savedJobs')
-    setLikedJobs([])
-  }
+  const [superLike, setSuperLike] = useState(
+    JSON.parse(localStorage.getItem('superLike')) || []
+  )
 
   const updateJobList = (jobs) => {
     setLikedJobs(jobs)
+  }
+
+  const updateSuperLikeList = (jobs) => {
+    setSuperLike(jobs)
+  }
+
+  const handleClear = () => {
+    localStorage.removeItem('savedJobs')
+    localStorage.removeItem('superLike')
+    setLikedJobs([])
+    setSuperLike([])
   }
 
   return (
@@ -30,6 +42,15 @@ export default function matchJobList() {
           <Link href="/appliedJobs">
             <p className={styles.searchedNavBar}>{text.searched}</p>
           </Link>
+        </div>
+        <div>
+          {superLike.map((superLike) => (
+            <SuperLikedJobs
+              key={superLike.id}
+              {...superLike}
+              updateSuperLikeList={updateSuperLikeList}
+            />
+          ))}
         </div>
         <div>
           {likedJobs.map((match) => (

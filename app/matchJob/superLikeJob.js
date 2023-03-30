@@ -4,28 +4,29 @@ import Link from 'next/link'
 import { AiFillCheckCircle } from 'react-icons/ai'
 import { FaTrashAlt } from 'react-icons/fa'
 import { motion } from 'framer-motion'
+import superLikeImg from '../../public/image/superLikeIcon.svg'
 
-export default function MatchedJobs(props) {
-  const { id, imgUrl, companyName, jobTitle, type, updateJobList } = props
+export default function SuperLikedJobs(props) {
+  const { id, imgUrl, companyName, jobTitle, type, updateSuperLikeList } = props
 
   const handleDelete = () => {
-    const savedJobs = JSON.parse(localStorage.getItem('savedJobs'))
-    const jobIndex = savedJobs.findIndex((job) => job.id === id)
-    savedJobs.splice(jobIndex, 1)
-    localStorage.setItem('savedJobs', JSON.stringify(savedJobs))
-    updateJobList(savedJobs)
+    const superLike = JSON.parse(localStorage.getItem('superLike'))
+    const jobIndex = superLike.findIndex((job) => job.id === id)
+    superLike.splice(jobIndex, 1)
+    localStorage.setItem('superLike', JSON.stringify(superLike))
+    updateSuperLikeList(superLike)
   }
 
   const handleApply = () => {
-    const savedJobs = JSON.parse(localStorage.getItem('savedJobs'))
-    const jobIndex = savedJobs.findIndex((job) => job.id === id)
-    const appliedJob = savedJobs[jobIndex]
-    savedJobs.splice(jobIndex, 1)
-    localStorage.setItem('savedJobs', JSON.stringify(savedJobs))
+    const superLike = JSON.parse(localStorage.getItem('superLike'))
+    const jobIndex = superLike.findIndex((job) => job.id === id)
+    const appliedJob = superLike[jobIndex]
+    superLike.splice(jobIndex, 1)
+    localStorage.setItem('superLike', JSON.stringify(superLike))
     const appliedJobs = JSON.parse(localStorage.getItem('appliedJobs')) || []
     appliedJobs.push(appliedJob)
     localStorage.setItem('appliedJobs', JSON.stringify(appliedJobs))
-    updateJobList(savedJobs)
+    updateSuperLikeList(superLike)
   }
 
   return (
@@ -44,7 +45,16 @@ export default function MatchedJobs(props) {
       />
       <div className={styles.textConatiner}>
         <Link href={`/matchJob/${id}`}>
-          <h2>{companyName}</h2>
+          <h2>
+            {companyName}
+            <Image
+              src={superLikeImg}
+              alt="SuperLike"
+              width={20}
+              height={20}
+              className={styles.superLikeStar}
+            />
+          </h2>
         </Link>
         <p>{jobTitle}</p>
         <p>{type}</p>

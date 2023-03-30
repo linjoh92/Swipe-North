@@ -7,7 +7,6 @@
 }
 
 .titelContainer {
-  height: 250px;
   background-color: var(--white);
   display: flex;
   flex-direction: column;
@@ -35,10 +34,17 @@
   gap: 10px;
 }
 
-.image {
+.imgContainer {
   border-radius: 50%;
-  width: 80px;
   height: 80px;
+  width: 80px;
+  justify-content: center;
+  display: flex;
+  overflow: hidden;
+}
+.image {
+  height: 80px;
+  width: auto;
 }
 
 .rubrikTitelConatiner {

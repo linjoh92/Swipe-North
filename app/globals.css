@@ -38,6 +38,7 @@ body {
 
 body {
   color: var(--black);
+  overflow: hidden;
 }
 
 a {

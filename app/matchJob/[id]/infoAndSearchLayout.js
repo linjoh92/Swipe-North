@@ -19,13 +19,15 @@ export default function InfoAndSearchLayout(props) {
           </Link>
         </div>
         <div className={styles.titelAndImg}>
-          <Image
-            src={imgUrl}
-            alt="photo-job"
-            width={400}
-            height={100}
-            className={styles.image}
-          />
+          <div className={styles.imgContainer}>
+            <Image
+              src={imgUrl}
+              alt="photo-job"
+              width={100}
+              height={100}
+              className={styles.image}
+            />
+          </div>
           <div className={styles.rubrikTitelConatiner}>
             <h2>{companyName}</h2>
             <p>{jobTitle}</p>
@@ -33,7 +35,7 @@ export default function InfoAndSearchLayout(props) {
         </div>
       </div>
       <div className={styles.infoConatiner}>
-        <h3>Arbetsbeskrivning </h3>
+        <h3>{text.jobDescription}</h3>
         <p className={styles.descriptionJob}>{shortInfo}</p>
         <div className={styles.iconAndInfoConatainer}>
           <div className={styles.iconAndInfo}>

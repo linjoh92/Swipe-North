@@ -44,7 +44,7 @@
 .matchedContainer {
   display: flex;
   justify-content: flex-start;
-  gap: 30px;
+  gap: 20px;
   align-items: center;
   padding: 20px 15px;
   margin: 0 15px;
@@ -67,7 +67,7 @@
 }
 
 .textConatiner h2 {
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--darkgreen);
 }
