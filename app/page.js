@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react'
-import LikeBar from './LikeBar.js'
+import LikeBar from './components/LikeBar.js'
 import styles from './page.module.css'
 import SwipeCard from './swipeCardLayout.js'
 import jobInfo from './JobAPI.js'
