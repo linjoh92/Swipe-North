@@ -4,16 +4,19 @@ import styles from './matchJob.module.css'
 import MatchedJobs from './matchedJobs'
 import SuperLikedJobs from './superLikeJob'
 import Link from 'next/link'
-import { useLanguage } from '../language'
 import React, { useState } from 'react'
-import { getSavedJobs, getSuperLikeJobs } from '../utils/localStorage'
+import { useLanguage } from '../language'
 
-export default function matchJobList() {
+export default function MatchJobList() {
   const { text } = useLanguage('swe')
 
-  const [likedJobs, setLikedJobs] = useState(getSavedJobs())
+  const [likedJobs, setLikedJobs] = useState(
+    JSON.parse(localStorage.getItem('savedJobs')) || []
+  )
 
-  const [superLike, setSuperLike] = useState(getSuperLikeJobs())
+  const [superLike, setSuperLike] = useState(
+    JSON.parse(localStorage.getItem('superLike')) || []
+  )
 
   const updateJobList = (jobs) => {
     setLikedJobs(jobs)

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { AiFillCheckCircle } from 'react-icons/ai';
 import { FaTrashAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import { useLocalStorage } from '../utils/localStorage';
+import useLocalStorage from "use-local-storage";
 
 export default function MatchedJobs(props) {
   const { id, imgUrl, companyName, jobTitle, type, updateJobList } = props;
