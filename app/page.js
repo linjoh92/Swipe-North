@@ -1,3 +1,4 @@
+'use client';
 import { useState, useEffect } from 'react';
 import LikeBar from './LikeBar';
 import styles from './page.module.css';
