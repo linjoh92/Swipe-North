@@ -44,21 +44,17 @@ const PageMenu = ({ setMenuOpen, setMenuIcon }) => {
 
       <div className={styles.menuListConatiner}>
         <div className={styles.menuList}>
-          <Link
-            href="/"
-            className={styles.menuOption}
-            onClick={handleLinkClick}
-          >
-            <MdSwipeUp style={{ fontSize: '1.2rem' }} />
-            <p>{text.swipe}</p>
+          <Link href="/">
+            <a className={styles.menuOption} onClick={handleLinkClick}>
+              <MdSwipeUp style={{ fontSize: '1.2rem' }} />
+              <p>{text.swipe}</p>
+            </a>
           </Link>
-          <Link
-            href="/matchJob"
-            className={styles.menuOption}
-            onClick={handleLinkClick}
-          >
-            <FaHeart style={{ fontSize: '1.1rem' }} />
-            <p>{text.saved}</p>
+          <Link href="/matchJob">
+            <a className={styles.menuOption} onClick={handleLinkClick}>
+              <FaHeart style={{ fontSize: '1.1rem' }} />
+              <p>{text.saved}</p>
+            </a>
           </Link>
         </div>
 
@@ -87,11 +83,11 @@ const PageMenu = ({ setMenuOpen, setMenuIcon }) => {
           </div>
           <Link
             href="https://www.facebook.com/sharer/sharer.php?u=https://github.com/Sakas19/swipe-north.git"
-            className={styles.menuOption}
-            onClick={handleLinkClick}
           >
-            <ImShare2 style={{ fontSize: '1rem' }} />
-            <p>{text.share}</p>
+            <a className={styles.menuOption} onClick={handleLinkClick}>
+              <ImShare2 style={{ fontSize: '1rem' }} />
+              <p>{text.share}</p>
+            </a>
           </Link>
         </div>
       </div>
@@ -102,7 +98,8 @@ const PageMenu = ({ setMenuOpen, setMenuIcon }) => {
         <p>{text.description2}</p>
       </div>
     </div>
-  )
-}
-
-export default PageMenu
+    )
+  }
+  
+  export default PageMenu
+  
