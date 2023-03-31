@@ -1,10 +1,12 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import LikeBar from './LikeBar';
 import styles from './page.module.css';
-import SwipeCard from './swipeCardLayout';
 import jobInfo from './JobAPI';
 import { saveToStorage, getFromStorage } from './storage';
+import dynamic from 'next/dynamic';
+
+const SwipeCard = dynamic(() => import('./swipeCardLayout'), { ssr: false });
 
 if (typeof window !== 'undefined') {
   // Use client-side code here
@@ -17,16 +19,6 @@ export default function Home() {
 
   const filteredJobs = jobAPI.filter((job) => !viewedJobs.includes(job));
   const currentJob = filteredJobs[currentJobIndex];
-
-  useEffect(() => {
-    const handleStorage = () => {
-      if (typeof window !== 'undefined') {
-        window.localStorage.setItem('test', 'testValue');
-      }
-    };
-
-    handleStorage();
-  }, []);
 
   const handleSwipe = (direction, isSuperLike) => {
     if (typeof window === 'undefined') return;
