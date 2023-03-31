@@ -2,7 +2,7 @@ import Link from 'next/link';
 import styles from './searchJob.module.css';
 import { BsChevronRight } from 'react-icons/bs';
 import { BsChevronLeft } from 'react-icons/bs';
-import { getFromStorage } from '../storage';
+import { getFromStorage } from '../../storage';
 
 export default function Navigation({ id }) {
   const likedJobs = getFromStorage('savedJobs') || [];

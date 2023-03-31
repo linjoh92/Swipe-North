@@ -3,6 +3,9 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  features: {
+    midwayRuntime: true,
+  },
 }
 
-module.exports = nextConfig
+module.exports = nextConfig;
