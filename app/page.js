@@ -1,9 +1,10 @@
-'use client';
+'use client'
 import { useState, useEffect } from 'react';
 import LikeBar from './LikeBar';
 import styles from './page.module.css';
 import SwipeCard from './swipeCardLayout';
 import jobInfo from './JobAPI';
+import { saveToStorage, getFromStorage } from './storage';
 
 export default function Home() {
   const [currentJobIndex, setCurrentJobIndex] = useState(0);
@@ -26,39 +27,30 @@ export default function Home() {
   const handleSwipe = (direction, isSuperLike) => {
     if (typeof window === 'undefined') return;
 
-    const jobToSave = filteredJobs[currentJobIndex]
-    const savedJobs = JSON.parse(window.localStorage.getItem('savedJobs')) || []
-    const superLikedJobs = JSON.parse(window.localStorage.getItem('superLike')) || []
+    const jobToSave = filteredJobs[currentJobIndex];
+    const savedJobs = getFromStorage('savedJobs') || [];
+    const superLikedJobs = getFromStorage('superLike') || [];
 
     if (isSuperLike && !superLikedJobs.some((job) => job.id === jobToSave.id)) {
-      window.localStorage.setItem(
-        'superLike',
-        JSON.stringify([...superLikedJobs, jobToSave])
-      )
+      saveToStorage('superLike', [...superLikedJobs, jobToSave]);
     } else if (
       direction === 'up' &&
       !savedJobs.some((job) => job.id === jobToSave.id)
     ) {
-      window.localStorage.setItem(
-        'savedJobs',
-        JSON.stringify([...savedJobs, jobToSave])
-      )
+      saveToStorage('savedJobs', [...savedJobs, jobToSave]);
     } else {
-      const storageKey = direction === 'left' ? 'like' : 'dislike'
-      const storageItems = JSON.parse(window.localStorage.getItem(storageKey)) || []
+      const storageKey = direction === 'left' ? 'like' : 'dislike';
+      const storageItems = getFromStorage(storageKey) || [];
       if (!storageItems.some((job) => job.id === jobToSave.id)) {
-        window.localStorage.setItem(
-          storageKey,
-          JSON.stringify([...storageItems, jobToSave])
-        )
+        saveToStorage(storageKey, [...storageItems, jobToSave]);
       }
-      const updatedJobAPI = jobAPI.filter((job) => job.id !== jobToSave.id)
-      setJobAPI(updatedJobAPI)
-      setCurrentJobIndex((prevIndex) => prevIndex % updatedJobAPI.length)
+      const updatedJobAPI = jobAPI.filter((job) => job.id !== jobToSave.id);
+      setJobAPI(updatedJobAPI);
+      setCurrentJobIndex((prevIndex) => prevIndex % updatedJobAPI.length);
     }
-    setViewedJobs((prevJobs) => [...prevJobs, currentJob])
-    setCurrentJobIndex((prevIndex) => (prevIndex + 1) % filteredJobs.length)
-  }
+    setViewedJobs((prevJobs) => [...prevJobs, currentJob]);
+    setCurrentJobIndex((prevIndex) => (prevIndex + 1) % filteredJobs.length);
+  };
 
   function shuffle(array) {
     let currentIndex = array.length,
@@ -90,10 +82,10 @@ export default function Home() {
         </div>
       </main>
       <LikeBar
-          onLike={() => handleSwipe('up', false)}
-          onSuperLike={() => handleSwipe('up', true)}
-          onNext={() => handleSwipe('down', false)}
-        />
-      </section>
-    )
+        onLike={() => handleSwipe('up', false)}
+        onSuperLike={() => handleSwipe('up', true)}
+        onNext={() => handleSwipe('down', false)}
+      />
+    </section>
+  );
 }

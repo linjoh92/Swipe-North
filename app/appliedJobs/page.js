@@ -1,21 +1,26 @@
 'use client'
-/* eslint-disable react-hooks/rules-of-hooks */
-import styles from './appliedJobs.module.css'
-import AppliedJobs from './appliedJobs'
-import Link from 'next/link'
-import { useLanguage } from '../language'
-import { useState } from 'react'
+import styles from './appliedJobs.module.css';
+import AppliedJobs from './appliedJobs';
+import Link from 'next/link';
+import { useLanguage } from '../language';
+import { useState, useEffect } from 'react';
+import { saveToStorage, getFromStorage } from '../storage';
 
-export default function matchJobList() {
-  const { text } = useLanguage('swe')
-  const [appliedJobs, setAppliedJobs] = useState(
-    JSON.parse(localStorage.getItem('appliedJobs')) || []
-  )
+export default function MatchJobList() {
+  const { text } = useLanguage('swe');
+  const [appliedJobs, setAppliedJobs] = useState([]);
+
+  useEffect(() => {
+    const storedAppliedJobs = getFromStorage('appliedJobs');
+    if (storedAppliedJobs) {
+      setAppliedJobs(storedAppliedJobs);
+    }
+  }, []);
 
   const handleClear = () => {
-    localStorage.removeItem('appliedJobs')
-    setAppliedJobs([])
-  }
+    saveToStorage('appliedJobs', []);
+    setAppliedJobs([]);
+  };
 
   return (
     <div className={styles.listContainer}>
@@ -38,5 +43,5 @@ export default function matchJobList() {
         </div>
       </div>
     </div>
-  )
+  );
 }

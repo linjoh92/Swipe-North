@@ -1,34 +1,35 @@
-'use client'
-import styles from './matchJob.module.css'
-import Image from 'next/image'
-import Link from 'next/link'
-import { AiFillCheckCircle } from 'react-icons/ai'
-import { FaTrashAlt } from 'react-icons/fa'
-import { motion } from 'framer-motion'
-import superLikeImg from '../../public/image/superLikeIcon.svg'
+import styles from './matchJob.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
+import { AiFillCheckCircle } from 'react-icons/ai';
+import { FaTrashAlt } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import superLikeImg from '../../public/image/superLikeIcon.svg';
+import { saveToStorage, getFromStorage } from '../storage';
 
 export default function SuperLikedJobs(props) {
-  const { id, imgUrl, companyName, jobTitle, type, updateSuperLikeList } = props
+  const { id, imgUrl, companyName, jobTitle, type, updateSuperLikeList } = props;
 
   const handleDelete = () => {
-    const superLike = JSON.parse(localStorage.getItem('superLike'))
-    const jobIndex = superLike.findIndex((job) => job.id === id)
-    superLike.splice(jobIndex, 1)
-    localStorage.setItem('superLike', JSON.stringify(superLike))
-    updateSuperLikeList(superLike)
-  }
+    const superLike = getFromStorage('superLike');
+    const jobIndex = superLike.findIndex((job) => job.id === id);
+    superLike.splice(jobIndex, 1);
+    saveToStorage('superLike', superLike);
+    updateSuperLikeList(superLike);
+  };
 
   const handleApply = () => {
-    const superLike = JSON.parse(localStorage.getItem('superLike'))
-    const jobIndex = superLike.findIndex((job) => job.id === id)
-    const appliedJob = superLike[jobIndex]
-    superLike.splice(jobIndex, 1)
-    localStorage.setItem('superLike', JSON.stringify(superLike))
-    const appliedJobs = JSON.parse(localStorage.getItem('appliedJobs')) || []
-    appliedJobs.push(appliedJob)
-    localStorage.setItem('appliedJobs', JSON.stringify(appliedJobs))
-    updateSuperLikeList(superLike)
-  }
+    const superLike = getFromStorage('superLike');
+    const jobIndex = superLike.findIndex((job) => job.id === id);
+    const appliedJob = superLike[jobIndex];
+    superLike.splice(jobIndex, 1);
+    saveToStorage('superLike', superLike);
+
+    const appliedJobs = getFromStorage('appliedJobs') || [];
+    appliedJobs.push(appliedJob);
+    saveToStorage('appliedJobs', appliedJobs);
+    updateSuperLikeList(superLike);
+  };
 
   return (
     <motion.div
@@ -80,5 +81,5 @@ export default function SuperLikedJobs(props) {
         </motion.div>
       </motion.div>
     </motion.div>
-  )
+  );
 }

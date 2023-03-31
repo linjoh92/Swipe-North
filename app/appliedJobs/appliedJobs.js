@@ -1,7 +1,9 @@
+'use client'
 import styles from './appliedJobs.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
 import { BsCheckLg } from 'react-icons/bs'
+
 
 export default function AppliedJobs(props) {
   const { imgUrl, companyName, jobTitle, type, link } = props
