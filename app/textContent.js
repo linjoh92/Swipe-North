@@ -29,7 +29,6 @@ const languageText = {
     partTime: 'Deltid',
     hourly: 'Timanställd',
     //home
-    area: 'Yrkesområde',
   },
   eng: {
     //menu
