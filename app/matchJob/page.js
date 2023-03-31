@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/rules-of-hooks */
 'use client'
 
 import styles from './matchJob.module.css'
@@ -7,17 +6,14 @@ import SuperLikedJobs from './superLikeJob'
 import Link from 'next/link'
 import { useLanguage } from '../language'
 import React, { useState } from 'react'
+import { getSavedJobs, getSuperLikeJobs } from '../utils/localStorage'
 
 export default function matchJobList() {
   const { text } = useLanguage('swe')
 
-  const [likedJobs, setLikedJobs] = useState(
-    JSON.parse(localStorage.getItem('savedJobs')) || []
-  )
+  const [likedJobs, setLikedJobs] = useState(getSavedJobs())
 
-  const [superLike, setSuperLike] = useState(
-    JSON.parse(localStorage.getItem('superLike')) || []
-  )
+  const [superLike, setSuperLike] = useState(getSuperLikeJobs())
 
   const updateJobList = (jobs) => {
     setLikedJobs(jobs)

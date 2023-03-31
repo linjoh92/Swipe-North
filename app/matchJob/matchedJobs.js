@@ -1,33 +1,33 @@
-'use client'
-import styles from './matchJob.module.css'
-import Image from 'next/image'
-import Link from 'next/link'
-import { AiFillCheckCircle } from 'react-icons/ai'
-import { FaTrashAlt } from 'react-icons/fa'
-import { motion } from 'framer-motion'
+import styles from './matchJob.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
+import { AiFillCheckCircle } from 'react-icons/ai';
+import { FaTrashAlt } from 'react-icons/fa';
+import { motion } from 'framer-motion';
+import { useLocalStorage } from '../utils/localStorage';
 
 export default function MatchedJobs(props) {
-  const { id, imgUrl, companyName, jobTitle, type, updateJobList } = props
+  const { id, imgUrl, companyName, jobTitle, type, updateJobList } = props;
+
+  const [savedJobs, setSavedJobs] = useLocalStorage('savedJobs', []);
+  const [appliedJobs, setAppliedJobs] = useLocalStorage('appliedJobs', []);
 
   const handleDelete = () => {
-    const savedJobs = JSON.parse(localStorage.getItem('savedJobs'))
-    const jobIndex = savedJobs.findIndex((job) => job.id === id)
-    savedJobs.splice(jobIndex, 1)
-    localStorage.setItem('savedJobs', JSON.stringify(savedJobs))
-    updateJobList(savedJobs)
-  }
+    const jobIndex = savedJobs.findIndex((job) => job.id === id);
+    const updatedJobs = [...savedJobs.slice(0, jobIndex), ...savedJobs.slice(jobIndex + 1)];
+    setSavedJobs(updatedJobs);
+    updateJobList(updatedJobs);
+  };
 
   const handleApply = () => {
-    const savedJobs = JSON.parse(localStorage.getItem('savedJobs'))
-    const jobIndex = savedJobs.findIndex((job) => job.id === id)
-    const appliedJob = savedJobs[jobIndex]
-    savedJobs.splice(jobIndex, 1)
-    localStorage.setItem('savedJobs', JSON.stringify(savedJobs))
-    const appliedJobs = JSON.parse(localStorage.getItem('appliedJobs')) || []
-    appliedJobs.push(appliedJob)
-    localStorage.setItem('appliedJobs', JSON.stringify(appliedJobs))
-    updateJobList(savedJobs)
-  }
+    const jobIndex = savedJobs.findIndex((job) => job.id === id);
+    const appliedJob = savedJobs[jobIndex];
+    const updatedJobs = [...savedJobs.slice(0, jobIndex), ...savedJobs.slice(jobIndex + 1)];
+    setSavedJobs(updatedJobs);
+    const updatedAppliedJobs = [...appliedJobs, appliedJob];
+    setAppliedJobs(updatedAppliedJobs);
+    updateJobList(updatedJobs);
+  };
 
   return (
     <motion.div
@@ -70,5 +70,5 @@ export default function MatchedJobs(props) {
         </motion.div>
       </motion.div>
     </motion.div>
-  )
+  );
 }
