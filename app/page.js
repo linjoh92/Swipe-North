@@ -1,10 +1,13 @@
-'use client'
 import { useState, useEffect } from 'react';
 import LikeBar from './LikeBar';
 import styles from './page.module.css';
 import SwipeCard from './swipeCardLayout';
 import jobInfo from './JobAPI';
 import { saveToStorage, getFromStorage } from './storage';
+
+if (typeof window !== 'undefined') {
+  // Use client-side code here
+}
 
 export default function Home() {
   const [currentJobIndex, setCurrentJobIndex] = useState(0);

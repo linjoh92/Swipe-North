@@ -12,3 +12,7 @@ export function saveToStorage(key, value) {
     return null;
   }
   
+  if (typeof window !== 'undefined') {
+    // Use client-side code here
+  }
+  
