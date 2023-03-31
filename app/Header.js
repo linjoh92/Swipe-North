@@ -16,13 +16,14 @@ const Header = () => {
 
   const toggleMenu = () => {
     if (menuOpen) {
+      setMenuOpen(false) // add this line
       router.back()
     } else {
       setPrevPage(router.pathname)
       router.push('/menu')
     }
     setMenuOpen(!menuOpen)
-  }
+  }  
 
   const menuIcon = (
     <div onClick={toggleMenu}>

@@ -10,7 +10,7 @@ import { ImShare2 } from 'react-icons/im'
 import { useEffect, useState } from 'react'
 import languageText from '../textContent'
 
-const Menu = ({ setMenuOpen, setMenuIcon }) => {
+const PageMenu = ({ setMenuOpen, setMenuIcon }) => {
   const [language, setLanguage] = useState('swe')
   const [text, setText] = useState('')
 
@@ -105,4 +105,4 @@ const Menu = ({ setMenuOpen, setMenuIcon }) => {
   )
 }
 
-export default Menu
+export default PageMenu
