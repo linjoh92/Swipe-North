@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import styles from './matchJob.module.css';
 import MatchedJobs from './matchedJobs';
 import SuperLikedJobs from './superLikeJob';

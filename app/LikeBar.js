@@ -1,3 +1,4 @@
+'use client'
 import './globals.css'
 import { FaHeart } from 'react-icons/fa'
 import { IoIosClose } from 'react-icons/io'
