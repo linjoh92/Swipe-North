@@ -9,7 +9,7 @@ import { MdOutlineLanguage } from 'react-icons/md'
 import { ImShare2 } from 'react-icons/im'
 import { useLanguage } from '../language'
 
-const Menu = () => {
+export default function Menu(){
   const { language, text, toggleLanguage } = useLanguage('swe')
 
   return (
@@ -81,4 +81,4 @@ const flagOpacity = (language, flag) => {
   return language === flag ? 1 : 0.3
 }
 
-export default Menu
+

@@ -9,6 +9,7 @@ import { CgClose } from 'react-icons/cg'
 import { FiMenu } from 'react-icons/fi'
 import styles from './headerLikeBar.module.css'
 
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   const [, setPrevPage] = useState('/')
@@ -19,12 +20,11 @@ const Header = () => {
       setMenuOpen(false);
       router.back();
     } else {
-      setMenuOpen(true); // change this line
+      setMenuOpen(true);
       setPrevPage(router.pathname);
       router.push('/menu');
     }
-  };
-  
+  };  
 
   const menuIcon = (
     <div onClick={toggleMenu}>

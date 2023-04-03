@@ -1,15 +1,13 @@
 'use client';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import LikeBar from './LikeBar';
 import styles from './page.module.css';
 import jobInfo from './JobAPI';
 import { saveToStorage, getFromStorage } from './storage';
-import dynamic from 'next/dynamic';
-//import SwipeCard from './swipeCardLayout'
+//import dynamic from 'next/dynamic';
+import SwipeCard from './swipeCardLayout';
 
-const SwipeCard = dynamic(() => import('./swipeCardLayout'), { ssr: false });
-if (typeof window !== 'undefined') {
-  'Use client-side code here' }
+//const SwipeCard = dynamic(() => import('./swipeCardLayout'), { ssr: false });
 
 export default function Home() {
   const [currentJobIndex, setCurrentJobIndex] = useState(0);
@@ -20,8 +18,6 @@ export default function Home() {
   const currentJob = filteredJobs[currentJobIndex];
 
   const handleSwipe = (direction, isSuperLike) => {
-    if (typeof window === 'undefined') return;
-
     const jobToSave = filteredJobs[currentJobIndex];
     const savedJobs = getFromStorage('savedJobs') || [];
     const superLikedJobs = getFromStorage('superLike') || [];
@@ -84,3 +80,4 @@ export default function Home() {
     </section>
   );
 }
+
