@@ -9,8 +9,13 @@ import { MdOutlineLanguage } from 'react-icons/md'
 import { ImShare2 } from 'react-icons/im'
 import { useLanguage } from '../language'
 
-export default function Menu(){
+
+export default function Menu() {
   const { language, text, toggleLanguage } = useLanguage('swe')
+
+  const flagOpacity = (language, flag) => {
+    return language === flag ? 1 : 0.3
+  }
 
   return (
     <div className={styles.menuContainer}>
@@ -41,7 +46,7 @@ export default function Menu(){
             <p>{text.language}</p>
             <div className={styles.flagContainer}>
               <Image
-                src={'/..//image/eng.svg'}
+                src={'/image/eng.svg'}
                 alt="eng-flag"
                 width={16}
                 height={16}
@@ -49,7 +54,7 @@ export default function Menu(){
                 style={{ opacity: flagOpacity(language, 'eng') }}
               />
               <Image
-                src={'/..//image/swe.svg'}
+                src={'/image/swe.svg'}
                 alt="eng-flag"
                 width={16}
                 height={16}
@@ -75,10 +80,6 @@ export default function Menu(){
       </div>
     </div>
   )
-}
-
-const flagOpacity = (language, flag) => {
-  return language === flag ? 1 : 0.3
 }
 
 

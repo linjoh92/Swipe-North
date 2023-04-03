@@ -51,7 +51,9 @@ const Header = () => {
         <Link href="/matchJob">
           <FaHeart style={{ fontSize: '1.8rem', color: '#9EB45A' }} />
         </Link>
-        <div className={styles.menuIcon}>{menuIcon}</div>
+        <Link href="/menu">
+          <div className={styles.menuIcon}>{menuIcon}</div>
+        </Link>
       </div>
     </header>
   )

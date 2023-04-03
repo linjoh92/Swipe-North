@@ -39,7 +39,7 @@ export default function SwipeCard(props) {
             onClick={() => setShowModal(false)}
           />
           <Modal
-            imgUrl={imgUrl}
+            imgUrl= {imgUrl}
             companyName={companyName}
             jobTitle={jobTitle}
             shortInfo={shortInfo}
