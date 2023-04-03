@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "p": "npx prettier --write ."
+    "p": "npx prettier --write .",
+    "v": "vercel"
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
@@ -25,7 +26,8 @@
     "react-tinder-card": "^1.6.2",
     "swipe-js-iso": "^2.1.5",
     "swipejs": "^2.3.1",
-    "use-local-storage": "^2.3.6"
+    "use-local-storage": "^2.3.6",
+    "vercel": "^28.18.3"
   },
   "devDependencies": {
     "prettier": "^2.8.6"
