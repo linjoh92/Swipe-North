@@ -1,3 +1,4 @@
+'use client'
 import styles from './matchJob.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -5,6 +6,8 @@ import { AiFillCheckCircle } from 'react-icons/ai';
 import { FaTrashAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import useLocalStorage from "use-local-storage";
+import { useLanguage } from '../language';
+
 
 if (typeof window !== 'undefined') {
   // Use client-side code here
@@ -13,6 +16,7 @@ if (typeof window !== 'undefined') {
 export default function MatchedJobs(props) {
   const { id, imgUrl, companyName, jobTitle, type, updateJobList } = props;
 
+  const { text } = useLanguage('swe');
   const [savedJobs, setSavedJobs] = useLocalStorage('savedJobs', []);
   const [appliedJobs, setAppliedJobs] = useLocalStorage('appliedJobs', []);
 
@@ -62,7 +66,7 @@ export default function MatchedJobs(props) {
           whileTap={{ scale: 0.9 }}
           onClick={handleDelete}
         >
-          <FaTrashAlt style={{ fontSize: '1rem' }} /> Ta bort
+          <FaTrashAlt style={{ fontSize: '1rem' }} /> {text.delete}
         </motion.div>
         <motion.div
           className={styles.applied}
@@ -70,7 +74,7 @@ export default function MatchedJobs(props) {
           whileTap={{ scale: 0.9 }}
           onClick={handleApply}
         >
-          <AiFillCheckCircle style={{ fontSize: '1.2rem' }} /> Sökt
+          <AiFillCheckCircle style={{ fontSize: '1.2rem' }} /> {text.applied}
         </motion.div>
       </motion.div>
     </motion.div>

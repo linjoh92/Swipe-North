@@ -9,17 +9,7 @@ import styles from './page.module.css'
 import { useState } from 'react'
 
 export default function SwipeCard(props) {
-  const {
-    category,
-    id,
-    imgUrl,
-    companyName,
-    jobTitle,
-    shortInfo,
-    days,
-    type,
-    link,
-  } = props
+  const { id, imgUrl, companyName, jobTitle, shortInfo, days, type, link } = props
   const { text } = useLanguage('swe')
   const [showModal, setShowModal] = useState(false)
 
@@ -28,7 +18,6 @@ export default function SwipeCard(props) {
     props.onSwipe(direction)
   }
 
-  // Function to handle when the card is out of the frame
   const outOfFrame = (job) => {
     console.log(job.jobTitle, job.id, 'left the screen!')
   }
@@ -38,7 +27,7 @@ export default function SwipeCard(props) {
   }
 
   return (
-    <div className={styles.swipeContainer}>
+    <div className={`${styles.swipeContainer} ${styles.pressable}`}>
       {showModal && (
         <>
           <motion.div
@@ -88,18 +77,19 @@ export default function SwipeCard(props) {
             />
           </motion.div>
 
-          <div className={styles.infoConatiner} onClick={handleClick}>
+          <div
+            className={`${styles.infoConatiner} ${styles.pressable}`}
+            onClick={handleClick}
+          >
             <div className={styles.jobTitelContainer}>
               <h2>{companyName}</h2>
               <MdInfoOutline />
             </div>
             <p>{jobTitle}</p>
-            <p style={{ fontWeight: '500', fontSize: '1rem' }}>
-              {text.area} : {category}
-            </p>
           </div>
         </div>
       </TinderCard>
     </div>
   )
 }
+

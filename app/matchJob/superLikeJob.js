@@ -7,9 +7,12 @@ import { FaTrashAlt } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import superLikeImg from '../../public/image/superLikeIcon.svg';
 import { saveToStorage, getFromStorage } from '../storage';
+import { useLanguage } from '../language';
+
 
 export default function SuperLikedJobs(props) {
   const { id, imgUrl, companyName, jobTitle, type, updateSuperLikeList } = props;
+  const { text } = useLanguage('swe');
 
   const handleDelete = () => {
     const superLike = getFromStorage('superLike');
@@ -70,7 +73,7 @@ export default function SuperLikedJobs(props) {
           whileTap={{ scale: 0.9 }}
           onClick={handleDelete}
         >
-          <FaTrashAlt style={{ fontSize: '1rem' }} /> Ta bort
+          <FaTrashAlt style={{ fontSize: '1rem' }} /> {text.delete}
         </motion.div>
         <motion.div
           className={styles.applied}
@@ -78,7 +81,7 @@ export default function SuperLikedJobs(props) {
           whileTap={{ scale: 0.9 }}
           onClick={handleApply}
         >
-          <AiFillCheckCircle style={{ fontSize: '1.2rem' }} /> Sökt
+          <AiFillCheckCircle style={{ fontSize: '1.2rem' }} /> {text.applied}
         </motion.div>
       </motion.div>
     </motion.div>

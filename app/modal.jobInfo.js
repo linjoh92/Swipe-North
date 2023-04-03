@@ -1,3 +1,4 @@
+'use client'
 import styles from './page.module.css'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
@@ -6,16 +7,7 @@ import { AiOutlineClockCircle } from 'react-icons/ai'
 import { MdWorkHistory } from 'react-icons/md'
 
 export default function Modal(props) {
-  const {
-    imgUrl,
-    companyName,
-    jobTitle,
-    shortInfo,
-    days,
-    type,
-    text,
-    setShowModal,
-  } = props
+  const { imgUrl, companyName, jobTitle, shortInfo, days, type, setShowModal, text } = props
 
   return (
     <motion.div
@@ -26,7 +18,7 @@ export default function Modal(props) {
     >
       <Image
         src={imgUrl}
-        alt="job-Image"
+        alt="bild"
         width={227}
         height={300}
         className={styles.modalImg}
@@ -52,7 +44,7 @@ export default function Modal(props) {
         </div>
       </div>
 
-      <div onClick={() => setShowModal(false)}>
+      <div className={styles.pressable} onClick={() => setShowModal(false)}>
         <BsChevronDown style={{ fontSize: '3rem', color: 'white' }} />
       </div>
     </motion.div>

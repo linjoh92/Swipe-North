@@ -4,13 +4,12 @@ import LikeBar from './LikeBar';
 import styles from './page.module.css';
 import jobInfo from './JobAPI';
 import { saveToStorage, getFromStorage } from './storage';
-import dynamic from 'next/dynamic';
+//import dynamic from 'next/dynamic';
+import SwipeCard from './swipeCardLayout'
 
-const SwipeCard = dynamic(() => import('./swipeCardLayout'), { ssr: false });
-
-if (typeof window !== 'undefined') {
-  // Use client-side code here
-}
+//const SwipeCard = dynamic(() => import('./swipeCardLayout'), { ssr: false });
+//if (typeof window !== 'undefined') {
+  // Use client-side code here}
 
 export default function Home() {
   const [currentJobIndex, setCurrentJobIndex] = useState(0);
