@@ -1,30 +1,23 @@
 'use client'
-
-import { useState } from 'react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { useRouter } from 'next/navigation'
-import { FaHeart } from 'react-icons/fa'
-import { CgClose } from 'react-icons/cg'
-import { FiMenu } from 'react-icons/fi'
-import styles from './headerLikeBar.module.css'
-
+import styles from './headerLikeBar.module.css';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import { FaHeart } from 'react-icons/fa';
+import { CgClose } from 'react-icons/cg';
+import { FiMenu } from 'react-icons/fi';
+import Menu from './menu/menu';
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [, setPrevPage] = useState('/')
-  const router = useRouter()
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    if (menuOpen) {
-      setMenuOpen(false);
-      router.back();
-    } else {
-      setMenuOpen(true);
-      setPrevPage(router.pathname);
-      router.push('/menu');
-    }
-  };  
+    setMenuOpen(!menuOpen);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
 
   const menuIcon = (
     <div onClick={toggleMenu}>
@@ -34,11 +27,11 @@ const Header = () => {
         <FiMenu style={{ fontSize: '2.2rem' }} />
       )}
     </div>
-  )
+  );
 
   return (
     <header className={styles.header}>
-      <Link href="/">
+      <Link href="/" onClick={closeMenu}>
         <Image
           src="/image/skelleftea_logo_DOT_black.svg"
           alt="logo"
@@ -48,15 +41,16 @@ const Header = () => {
         />
       </Link>
       <div className={styles.headerIconContainer}>
-        <Link href="/matchJob">
-          <FaHeart style={{ fontSize: '1.8rem', color: '#9EB45A' }} />
+        <Link href="/matchJob" onClick={closeMenu}>
+          <FaHeart className={styles.heartHeader}/>
         </Link>
-        <Link href="/menu">
-          <div className={styles.menuIcon}>{menuIcon}</div>
-        </Link>
+        <div className={styles.menuIcon}>{menuIcon}</div>
       </div>
+      {menuOpen && <Menu closeMenu={closeMenu} />}
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
+
+

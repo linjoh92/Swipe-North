@@ -18,7 +18,7 @@ export default function Modal(props) {
     >
       <Image
         src={imgUrl}
-        alt="bild"
+        alt="job-photo"
         width={227}
         height={300}
         className={styles.modalImg}

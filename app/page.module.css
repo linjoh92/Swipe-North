@@ -1,6 +1,5 @@
 .homeContainer {
   height: 100vh;
-  margin-top: 100px;
   width: 100%;
 }
 
@@ -8,6 +7,7 @@
   align-items: center;
   background: var(--white);
   display: flex;
+  margin-top: 100px;
   flex-direction: column;
   height: calc(100% - 240px);
 }

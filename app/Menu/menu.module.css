@@ -2,8 +2,10 @@
   background-color: var(--white);
   height: calc(100vh - 100px);
   color: black;
-  position: relative;
+  position: absolute;
+  width: 100vw;
   top: 100px;
+  right: 0;
   z-index: 60;
 }
 
@@ -74,4 +76,8 @@
 .infoContainer p {
   text-align-last: left;
   text-align: justify;
+}
+
+.menuHeart:active{
+  color: var(--lightgreen);
 }
