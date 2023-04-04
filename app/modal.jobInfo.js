@@ -2,9 +2,11 @@
 import styles from './page.module.css'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { BsChevronDown } from 'react-icons/bs'
+//import { BsChevronDown } from 'react-icons/bs'
 import { AiOutlineClockCircle } from 'react-icons/ai'
 import { MdWorkHistory } from 'react-icons/md'
+import { IoIosClose } from 'react-icons/io'
+
 
 export default function Modal(props) {
   const {
@@ -53,8 +55,8 @@ export default function Modal(props) {
         </div>
       </div>
 
-      <div className={styles.pressable} onClick={() => setShowModal(false)}>
-        <BsChevronDown style={{ fontSize: '3rem', color: 'white' }} />
+      <div className={styles.closeModal} onClick={() => setShowModal(false)}>
+        <IoIosClose style={{ fontSize: '2.5rem', color: 'white' }} />
       </div>
     </motion.div>
   )

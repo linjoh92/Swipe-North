@@ -102,8 +102,8 @@
   background-color: var(--lightgreen);
   color: white;
   position: fixed;
-  min-height: 525px;
-  z-index: 60;
+  min-height: 480px;
+  z-index: 45;
   bottom: 0;
   left: 0;
   display: flex;
@@ -154,4 +154,10 @@
 .likeButton {
   cursor: pointer;
   z-index: 20;
+}
+
+.closeModal{
+  position: absolute;
+  top: 2%;
+  left: 88%;
 }
