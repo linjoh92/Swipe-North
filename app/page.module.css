@@ -170,5 +170,9 @@
     height: calc(100% - 288px);
   }
 
+  .modal{
+    max-height: calc(100vh - 100px);
+  }
+
  
 }
