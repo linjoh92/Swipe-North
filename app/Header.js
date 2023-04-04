@@ -6,7 +6,7 @@ import { useState } from 'react';
 import { FaHeart } from 'react-icons/fa';
 import { CgClose } from 'react-icons/cg';
 import { FiMenu } from 'react-icons/fi';
-import Menu from './menu/menu';
+import Menu from './menu';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);

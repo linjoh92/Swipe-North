@@ -7,7 +7,7 @@ import { MdSwipeUp } from 'react-icons/md';
 import { FaHeart } from 'react-icons/fa';
 import { MdOutlineLanguage } from 'react-icons/md';
 import { ImShare2 } from 'react-icons/im';
-import { useLanguage } from '../language';
+import { useLanguage } from './language';
 
 export default function Menu({ closeMenu }) {
   const { language, text, toggleLanguage } = useLanguage('swe');
