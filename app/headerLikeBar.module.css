@@ -28,7 +28,7 @@
   top: calc(100vh - 140px);
   padding: 12px 0;
   width: 100%;
-  z-index: 50;
+  z-index: 56;
 }
 
 .btnContainer {
@@ -106,7 +106,7 @@
 
 @media only screen and (max-width: 600px) {
   .likeBarContainer {
-    top: calc(100vh - 185px);
-    height: 185px;
+    top: calc(100vh - 190px);
+    height: 190px;
   }
 }
