@@ -9,7 +9,7 @@
   display: flex;
   margin-top: 100px;
   flex-direction: column;
-  height: calc(100% - 240px);
+  height: calc(100% - 280px);
 }
 
 .swipeContainer {
@@ -161,10 +161,4 @@
   position: absolute;
   top: 2%;
   left: 88%;
-}
-
-@media only screen and (max-width: 768px) {
-  .modal {
-    min-height: 400px;
-  }
 }

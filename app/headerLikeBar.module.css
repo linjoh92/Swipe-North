@@ -26,7 +26,7 @@
   height: 140px;
   padding: 12px 0;
   position: fixed;
-  top: calc(100vh - 140px);
+  top: calc(100vh - 180px);
   width: 100%;
   z-index: 50;
 }
@@ -102,4 +102,10 @@
 .heartHeader:active{
   color: var(--darkgreen);
   font-size: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .likeBarContainer {
+    margin-bottom: 100px;
+  }
 }
