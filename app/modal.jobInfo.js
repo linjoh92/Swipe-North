@@ -7,7 +7,16 @@ import { AiOutlineClockCircle } from 'react-icons/ai'
 import { MdWorkHistory } from 'react-icons/md'
 
 export default function Modal(props) {
-  const { imgUrl, companyName, jobTitle, shortInfo, days, type, setShowModal, text } = props
+  const {
+    imgUrl,
+    companyName,
+    jobTitle,
+    shortInfo,
+    days,
+    type,
+    setShowModal,
+    text,
+  } = props
 
   return (
     <motion.div

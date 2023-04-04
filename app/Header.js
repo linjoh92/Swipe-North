@@ -1,23 +1,23 @@
 'use client'
-import styles from './headerLikeBar.module.css';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
-import { FaHeart } from 'react-icons/fa';
-import { CgClose } from 'react-icons/cg';
-import { FiMenu } from 'react-icons/fi';
-import Menu from './menu';
+import styles from './headerLikeBar.module.css'
+import Image from 'next/image'
+import Link from 'next/link'
+import { useState } from 'react'
+import { FaHeart } from 'react-icons/fa'
+import { CgClose } from 'react-icons/cg'
+import { FiMenu } from 'react-icons/fi'
+import Menu from './menu'
 
 const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false)
 
   const toggleMenu = () => {
-    setMenuOpen(!menuOpen);
-  };
+    setMenuOpen(!menuOpen)
+  }
 
   const closeMenu = () => {
-    setMenuOpen(false);
-  };
+    setMenuOpen(false)
+  }
 
   const menuIcon = (
     <div onClick={toggleMenu}>
@@ -27,7 +27,7 @@ const Header = () => {
         <FiMenu style={{ fontSize: '2.2rem' }} />
       )}
     </div>
-  );
+  )
 
   return (
     <header className={styles.header}>
@@ -42,15 +42,13 @@ const Header = () => {
       </Link>
       <div className={styles.headerIconContainer}>
         <Link href="/matchJob" onClick={closeMenu}>
-          <FaHeart className={styles.heartHeader}/>
+          <FaHeart className={styles.heartHeader} />
         </Link>
         <div className={styles.menuIcon}>{menuIcon}</div>
       </div>
       {menuOpen && <Menu closeMenu={closeMenu} />}
     </header>
-  );
-};
+  )
+}
 
-export default Header;
-
-
+export default Header

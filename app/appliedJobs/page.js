@@ -1,26 +1,26 @@
 'use client'
-import styles from './appliedJobs.module.css';
-import AppliedJobs from './appliedJobs';
-import Link from 'next/link';
-import { useLanguage } from '../language';
-import { useState, useEffect } from 'react';
-import { saveToStorage, getFromStorage } from '../storage';
+import styles from './appliedJobs.module.css'
+import AppliedJobs from './appliedJobs'
+import Link from 'next/link'
+import { useLanguage } from '../language'
+import { useState, useEffect } from 'react'
+import { saveToStorage, getFromStorage } from '../storage'
 
 export default function MatchJobList() {
-  const { text } = useLanguage('swe');
-  const [appliedJobs, setAppliedJobs] = useState([]);
+  const { text } = useLanguage('swe')
+  const [appliedJobs, setAppliedJobs] = useState([])
 
   useEffect(() => {
-    const storedAppliedJobs = getFromStorage('appliedJobs');
+    const storedAppliedJobs = getFromStorage('appliedJobs')
     if (storedAppliedJobs) {
-      setAppliedJobs(storedAppliedJobs);
+      setAppliedJobs(storedAppliedJobs)
     }
-  }, []);
+  }, [])
 
   const handleClear = () => {
-    saveToStorage('appliedJobs', []);
-    setAppliedJobs([]);
-  };
+    saveToStorage('appliedJobs', [])
+    setAppliedJobs([])
+  }
 
   return (
     <div className={styles.listContainer}>
@@ -43,5 +43,5 @@ export default function MatchJobList() {
         </div>
       </div>
     </div>
-  );
+  )
 }

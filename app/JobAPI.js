@@ -82,7 +82,7 @@ const jobInfo = [
   },
   {
     category: 'Administration',
-    companyName: 'Skellefteå kommun, Individ- och familjeomsorg',
+    companyName: 'Skellefteå kommun - familjeomsorg',
     days: '20',
     id: '8',
     imgUrl: '/image/unitmanager.png',
@@ -96,7 +96,7 @@ const jobInfo = [
     companyName: 'ASSA ABLOY Industrial Sverige AB',
     days: '22',
     id: '9',
-    imgUrl: '/image/ittechnician.png',
+    imgUrl: '/image/Ittechnician.png',
     jobTitle: 'Industrial Technician in Skellefteå',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27249075',
     shortInfo:
@@ -108,7 +108,7 @@ const jobInfo = [
     companyName: 'Minnovation international AB',
     days: '56',
     id: '10',
-    imgUrl: '/image/ittechnician.png',
+    imgUrl: '/image/Ittechnician.png',
     jobTitle: 'IT-Technician',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27117962',
     shortInfo: 'It position at Minnovation',

@@ -27,7 +27,7 @@
   position: fixed;
   top: calc(100vh - 140px);
   width: 100%;
-  z-index: 50;
+  z-index: 70;
 }
 
 .btnContainer {
@@ -92,13 +92,12 @@
   border-color: var(--darkred);
 }
 
-.heartHeader{
+.heartHeader {
   color: var(--lightgreen);
   font-size: 1.8rem;
-
 }
 
-.heartHeader:active{
+.heartHeader:active {
   color: var(--darkgreen);
   font-size: 2rem;
 }

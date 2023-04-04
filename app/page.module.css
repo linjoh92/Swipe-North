@@ -101,10 +101,10 @@
   width: 100%;
   background-color: var(--lightgreen);
   color: white;
-  position: absolute;
-  height: 420px;
-  z-index: 40;
-  bottom: 120px;
+  position: fixed;
+  min-height: 525px;
+  z-index: 60;
+  bottom: 0;
   left: 0;
   display: flex;
   align-items: center;

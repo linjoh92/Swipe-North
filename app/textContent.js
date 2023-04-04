@@ -18,7 +18,7 @@ const languageText = {
     clearApplied: 'ta bort alla sökta jobb',
     delete: 'Ta bort',
     applied: 'Sökt',
-    //Complite Info/serach page & error page - Job not found & Modal Quick info    
+    //Complite Info/serach page & error page - Job not found & Modal Quick info
     back: 'Tillbaka',
     jobDescription: 'Arbetsbeskrivning',
     published: 'Publicerat',

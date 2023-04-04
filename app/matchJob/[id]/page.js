@@ -1,19 +1,19 @@
 'use client'
-import InfoAndSearchLayout from './infoAndSearchLayout';
-import styles from './searchJob.module.css';
-import Link from 'next/link';
-import { useLanguage } from '../../language';
-import Navigation from './navigation';
-import { getFromStorage } from '../../storage';
+import InfoAndSearchLayout from './infoAndSearchLayout'
+import styles from './searchJob.module.css'
+import Link from 'next/link'
+import { useLanguage } from '../../language'
+import Navigation from './navigation'
+import { getFromStorage } from '../../storage'
 
 export default function JobInfoAndSearch({ params: { id } }) {
-  const likedJobs = getFromStorage('savedJobs') || [];
-  const superLikedJobs = getFromStorage('superLike') || [];
+  const likedJobs = getFromStorage('savedJobs') || []
+  const superLikedJobs = getFromStorage('superLike') || []
 
-  const allJobs = likedJobs.concat(superLikedJobs);
-  const job = allJobs.find((job) => job.id === id);
+  const allJobs = likedJobs.concat(superLikedJobs)
+  const job = allJobs.find((job) => job.id === id)
 
-  const { text } = useLanguage('swe');
+  const { text } = useLanguage('swe')
 
   if (!job) {
     return (
@@ -21,7 +21,7 @@ export default function JobInfoAndSearch({ params: { id } }) {
         <p>{text.error}</p>
         <Link href="/matchJob">{text.backMatched}</Link>
       </div>
-    );
+    )
   }
 
   return (
@@ -37,5 +37,5 @@ export default function JobInfoAndSearch({ params: { id } }) {
       />
       <Navigation id={job.id} />
     </>
-  );
+  )
 }

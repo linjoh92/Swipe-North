@@ -9,7 +9,8 @@ import styles from './page.module.css'
 import { useState } from 'react'
 
 export default function SwipeCard(props) {
-  const { id, imgUrl, companyName, jobTitle, shortInfo, days, type, link } = props
+  const { id, imgUrl, companyName, jobTitle, shortInfo, days, type, link } =
+    props
   const { text } = useLanguage('swe')
   const [showModal, setShowModal] = useState(false)
 
@@ -39,7 +40,7 @@ export default function SwipeCard(props) {
             onClick={() => setShowModal(false)}
           />
           <Modal
-            imgUrl= {imgUrl}
+            imgUrl={imgUrl}
             companyName={companyName}
             jobTitle={jobTitle}
             shortInfo={shortInfo}
@@ -92,4 +93,3 @@ export default function SwipeCard(props) {
     </div>
   )
 }
-

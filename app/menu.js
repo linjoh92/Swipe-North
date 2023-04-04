@@ -1,20 +1,20 @@
 'use client'
 
-import styles from './menu.module.css';
-import Image from 'next/image';
-import Link from 'next/link';
-import { MdSwipeUp } from 'react-icons/md';
-import { FaHeart } from 'react-icons/fa';
-import { MdOutlineLanguage } from 'react-icons/md';
-import { ImShare2 } from 'react-icons/im';
-import { useLanguage } from './language';
+import styles from './menu.module.css'
+import Image from 'next/image'
+import Link from 'next/link'
+import { MdSwipeUp } from 'react-icons/md'
+import { FaHeart } from 'react-icons/fa'
+import { MdOutlineLanguage } from 'react-icons/md'
+import { ImShare2 } from 'react-icons/im'
+import { useLanguage } from './language'
 
 export default function Menu({ closeMenu }) {
-  const { language, text, toggleLanguage } = useLanguage('swe');
+  const { language, text, toggleLanguage } = useLanguage('swe')
 
   const flagOpacity = (language, flag) => {
-    return language === flag ? 1 : 0.3;
-  };
+    return language === flag ? 1 : 0.3
+  }
 
   return (
     <div className={styles.menuContainer}>
@@ -33,7 +33,11 @@ export default function Menu({ closeMenu }) {
             <MdSwipeUp style={{ fontSize: '1.2rem' }} />
             <p>{text.swipe}</p>
           </Link>
-          <Link href="/matchJob" className={`${styles.menuOption} ${styles.menuHeart}`} onClick={closeMenu}>
+          <Link
+            href="/matchJob"
+            className={`${styles.menuOption} ${styles.menuHeart}`}
+            onClick={closeMenu}
+          >
             <FaHeart style={{ fontSize: '1.1rem' }} />
             <p>{text.saved}</p>
           </Link>
@@ -80,5 +84,3 @@ export default function Menu({ closeMenu }) {
     </div>
   )
 }
-
-

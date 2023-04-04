@@ -1,47 +1,47 @@
-'use client';
-import styles from './matchJob.module.css';
-import MatchedJobs from './matchedJobs';
-import SuperLikedJobs from './superLikeJob';
-import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
-import { useLanguage } from '../language';
-import { saveToStorage, getFromStorage } from '../storage';
+'use client'
+import styles from './matchJob.module.css'
+import MatchedJobs from './matchedJobs'
+import SuperLikedJobs from './superLikeJob'
+import Link from 'next/link'
+import React, { useState, useEffect } from 'react'
+import { useLanguage } from '../language'
+import { saveToStorage, getFromStorage } from '../storage'
 
 export default function MatchJobList() {
-  const { text } = useLanguage('swe');
+  const { text } = useLanguage('swe')
 
-  const [likedJobs, setLikedJobs] = useState([]);
-  const [superLike, setSuperLike] = useState([]);
+  const [likedJobs, setLikedJobs] = useState([])
+  const [superLike, setSuperLike] = useState([])
 
   useEffect(() => {
-    const storedLikedJobs = getFromStorage('savedJobs');
-    const storedSuperLike = getFromStorage('superLike');
+    const storedLikedJobs = getFromStorage('savedJobs')
+    const storedSuperLike = getFromStorage('superLike')
 
     if (storedLikedJobs) {
-      setLikedJobs(storedLikedJobs);
+      setLikedJobs(storedLikedJobs)
     }
 
     if (storedSuperLike) {
-      setSuperLike(storedSuperLike);
+      setSuperLike(storedSuperLike)
     }
-  }, []);
+  }, [])
 
-  const updateJobList = (jobs) => {
-    setLikedJobs(jobs);
-  };
+  const updateSavedJobsList = (jobs) => {
+    setLikedJobs(jobs)
+  }
 
   const updateSuperLikeList = (jobs) => {
-    setSuperLike(jobs);
-  };
+    setSuperLike(jobs)
+  }
 
   const handleClear = () => {
-    saveToStorage('savedJobs', []);
-    saveToStorage('superLike', []);
-    saveToStorage('like', []);
-    saveToStorage('dislike', []);
-    setLikedJobs([]);
-    setSuperLike([]);
-  };
+    saveToStorage('savedJobs', [])
+    saveToStorage('superLike', [])
+    saveToStorage('like', [])
+    saveToStorage('dislike', [])
+    setLikedJobs([])
+    setSuperLike([])
+  }
 
   return (
     <div className={styles.listContainer}>
@@ -66,7 +66,7 @@ export default function MatchJobList() {
             <MatchedJobs
               key={match.id}
               {...match}
-              updateJobList={updateJobList}
+              updateSavedJobsList={updateSavedJobsList}
             />
           ))}
         </div>
@@ -77,5 +77,5 @@ export default function MatchJobList() {
         </div>
       </div>
     </div>
-  );
+  )
 }

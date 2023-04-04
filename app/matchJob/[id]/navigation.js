@@ -1,26 +1,26 @@
-import Link from 'next/link';
-import styles from './searchJob.module.css';
-import { BsChevronRight } from 'react-icons/bs';
-import { BsChevronLeft } from 'react-icons/bs';
-import { getFromStorage } from '../../storage';
+import Link from 'next/link'
+import styles from './searchJob.module.css'
+import { BsChevronRight } from 'react-icons/bs'
+import { BsChevronLeft } from 'react-icons/bs'
+import { getFromStorage } from '../../storage'
 
 export default function Navigation({ id }) {
-  const likedJobs = getFromStorage('savedJobs') || [];
-  const superLikedJobs = getFromStorage('superLike') || [];
+  const likedJobs = getFromStorage('savedJobs') || []
+  const superLikedJobs = getFromStorage('superLike') || []
 
   // Combine the superLikedJobs and likedJobs arrays
-  const allJobs = superLikedJobs.concat(likedJobs);
+  const allJobs = superLikedJobs.concat(likedJobs)
 
   // Sort the combined array by the date the job was saved
-  allJobs.sort((a, b) => new Date(b.dateSaved) - new Date(a.dateSaved));
+  allJobs.sort((a, b) => new Date(b.dateSaved) - new Date(a.dateSaved))
 
-  const activeNumber = parseInt(id, 10);
+  const activeNumber = parseInt(id, 10)
 
   const activeIndex = allJobs.findIndex(
     (job) => parseInt(job.id, 10) === activeNumber
-  );
-  const prevNumber = allJobs[activeIndex - 1];
-  const nextNumber = allJobs[activeIndex + 1];
+  )
+  const prevNumber = allJobs[activeIndex - 1]
+  const nextNumber = allJobs[activeIndex + 1]
 
   return (
     <>
@@ -49,5 +49,5 @@ export default function Navigation({ id }) {
         )}
       </div>
     </>
-  );
+  )
 }
