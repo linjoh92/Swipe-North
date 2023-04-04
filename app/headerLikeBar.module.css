@@ -106,8 +106,8 @@
 
 @media only screen and (max-width: 600px) {
   .likeBarContainer {
-    top: calc(100vh - 190px);
-    height: 190px;
+    top: calc(100vh - 188px);
+    height: 188px;
     padding: 5px 0;
   }
 }
