@@ -8,7 +8,7 @@ const jobInfo = [
     jobTitle: 'Marketing Administrator for Skellefteå Kraft',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27330840',
     shortInfo:
-      'Marketing Administrator position at Skellefteå Kraft.Marketing Administrator position at Skellefteå Kraft.',
+      'Marketing Administrator position at Skellefteå Kraft. Marketing Administrator position at Skellefteå Kraft.',
     type: 'Heltid',
   },
   {
@@ -157,7 +157,7 @@ const jobInfo = [
     jobTitle: 'IT Support Site Manager',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27181338',
     shortInfo:
-      'We are looking for an experienced IT Support Site Manager to join us in our mission to contribute to a greener future.',
+      'We are looking for an experienced IT Support Site Manager. Happy to join us in our mission to contribute to a greener future.',
     type: 'Deltid',
   },
   {
@@ -181,7 +181,7 @@ const jobInfo = [
     jobTitle: 'Master Data Specialist',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/26978137',
     shortInfo:
-      'At Northvolt you will be part of a fast growing company with high-energy and a dynamic environment.',
+      'At Northvolt you will be part of a fast growing company. With high-energy and a dynamic environment.',
     type: 'Heltid',
   },
   {
@@ -229,7 +229,7 @@ const jobInfo = [
     jobTitle: 'Warehouse worker',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27229892',
     shortInfo:
-      'We are now looking for people for upcoming summer assignments at Svensk Cater in Skellefteå during the weeks 24-33.',
+      'We are now looking for people for upcoming summer assignments at Svensk Cater. In Skellefteå during the weeks 24-33.',
     type: 'Heltid',
   },
   {
@@ -253,7 +253,7 @@ const jobInfo = [
     jobTitle: 'Bus driver',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27258655',
     shortInfo:
-      "Bus drivers in Skellefteå! Come and work at Connect Bus - One of the Nordics' leading bus companies - which is constantly growing. We want YOU to grow with us!",
+      "Bus drivers in Skellefteå! Come and work at Connect Bus. One of the Nordics' leading bus companies - which is constantly growing. We want YOU to grow with us!",
     type: 'Heltid',
   },
   {

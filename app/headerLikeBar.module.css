@@ -24,9 +24,9 @@
   background-color: var(--white);
   display: flex;
   height: 140px;
-  padding: 12px 0;
   position: fixed;
-  top: calc(100vh - 180px);
+  top: calc(100vh - 140px);
+  padding: 12px 0;
   width: 100%;
   z-index: 50;
 }
@@ -104,8 +104,9 @@
   font-size: 2rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   .likeBarContainer {
-    margin-bottom: 100px;
+    top: calc(100vh - 180px);
+    height: 180px;
   }
 }
