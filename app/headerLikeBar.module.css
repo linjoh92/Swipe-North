@@ -108,5 +108,6 @@
   .likeBarContainer {
     top: calc(100vh - 190px);
     height: 190px;
+    padding: 5px 0;
   }
 }
