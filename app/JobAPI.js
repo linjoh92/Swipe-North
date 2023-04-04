@@ -74,7 +74,7 @@ const jobInfo = [
     days: '20',
     id: '7',
     imgUrl: '/image/sectionmanager.png',
-    jobTitle: 'Section Manager for Internal Services, Skellefteå',
+    jobTitle: 'Section Manager for Internal Services',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27264445',
     shortInfo:
       'Section Manager with experience for a temporary appointment in Internal Services.',
