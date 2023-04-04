@@ -102,9 +102,10 @@
   background-color: var(--lightgreen);
   color: white;
   position: fixed;
-  min-height: fit-content;
+  min-height: 470px;
+  height: fit-content;
   z-index: 45;
-  bottom: 16%;
+  bottom: 0;
   left: 0;
   display: flex;
   align-items: center;
