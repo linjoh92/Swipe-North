@@ -52,3 +52,12 @@
     transform: rotate(360deg);
   }
 }
+
+@media only screen and (max-width: 400px) {
+
+  .thirdContainer{
+    padding-bottom: 100px;
+  }
+
+}
+
