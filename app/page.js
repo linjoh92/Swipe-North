@@ -5,7 +5,6 @@ import styles from './page.module.css'
 import jobInfo from './JobAPI'
 import { saveToStorage, getFromStorage } from './storage'
 import dynamic from 'next/dynamic'
-import Loading from './loadingPage'
 
 const SwipeCard = dynamic(() => import('./swipeCardLayout'), { ssr: false })
 
@@ -13,8 +12,6 @@ export default function Home() {
   const [currentJobIndex, setCurrentJobIndex] = useState(0)
   const [viewedJobs, setViewedJobs] = useState([])
   const [jobAPI, setJobAPI] = useState(shuffle(jobInfo))
-  const [isLoading, setIsLoading] = useState(!localStorage.getItem('appLoaded'));
-
 
   const filteredJobs = jobAPI.filter((job) => !viewedJobs.includes(job))
   const currentJob = filteredJobs[currentJobIndex]
@@ -61,43 +58,27 @@ export default function Home() {
     return array
   }
 
-  useEffect(() => {
-    if (!isLoading) {
-      localStorage.setItem('appLoaded', true);
-    }
-  }, [isLoading]);
-  
-  useEffect(() => {
-    if (isLoading) {
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 1300);
-    }
-  }, [isLoading]);
 
   return (
     <>
-      {isLoading && <Loading />}
-      {!isLoading && (
-        <section className={styles.homeContainer}>
-          <main className={styles.main}>
-            <div className={styles.swipeJobCard}>
-              {currentJob && (
-                <SwipeCard
-                  key={currentJob.id}
-                  {...currentJob}
-                  onSwipe={handleSwipe}
-                />
-              )}
-            </div>
-          </main>
-          <LikeBar
-            onLike={() => handleSwipe('up', false)}
-            onSuperLike={() => handleSwipe('up', true)}
-            onNext={() => handleSwipe('down', false)}
-          />
-        </section>
-      )}
+      <section className={styles.homeContainer}>
+        <main className={styles.main}>
+          <div className={styles.swipeJobCard}>
+            {currentJob && (
+              <SwipeCard
+                key={currentJob.id}
+                {...currentJob}
+                onSwipe={handleSwipe}
+              />
+            )}
+          </div>
+        </main>
+        <LikeBar
+          onLike={() => handleSwipe('up', false)}
+          onSuperLike={() => handleSwipe('up', true)}
+          onNext={() => handleSwipe('down', false)}
+        />
+      </section> 
     </>
   )
 }
