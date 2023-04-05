@@ -13,7 +13,8 @@ export default function Home() {
   const [currentJobIndex, setCurrentJobIndex] = useState(0)
   const [viewedJobs, setViewedJobs] = useState([])
   const [jobAPI, setJobAPI] = useState(shuffle(jobInfo))
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(!localStorage.getItem('appLoaded'));
+
 
   const filteredJobs = jobAPI.filter((job) => !viewedJobs.includes(job))
   const currentJob = filteredJobs[currentJobIndex]
@@ -61,10 +62,18 @@ export default function Home() {
   }
 
   useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false)
-    }, 1500)
-  }, [])
+    if (!isLoading) {
+      localStorage.setItem('appLoaded', true);
+    }
+  }, [isLoading]);
+  
+  useEffect(() => {
+    if (isLoading) {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 1300);
+    }
+  }, [isLoading]);
 
   return (
     <>

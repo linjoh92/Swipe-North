@@ -1,4 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+
 'use client'
 import { useState, useEffect } from 'react'
 import { useAtom } from 'jotai'
@@ -19,9 +20,4 @@ export const useLanguage = () => {
   }
 
   return { language, text, toggleLanguage }
-}
-
-export const flagOpacity = (flag) => {
-  const [language] = useAtom(languageAtom)
-  return language === flag
 }
