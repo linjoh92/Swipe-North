@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import LikeBar from './likeBar'
+import LikeBar from './LikeBar'
 import styles from './page.module.css'
 import jobInfo from './JobAPI'
 import { saveToStorage, getFromStorage } from './storage'
