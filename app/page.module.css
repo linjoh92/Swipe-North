@@ -169,4 +169,7 @@
     height: calc(100% - 288px);
   }
 
+  .modal {
+    padding: 0 30px 120px;
+  }
 }
