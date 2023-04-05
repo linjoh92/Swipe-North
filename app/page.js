@@ -1,6 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import LikeBar from './LikeBar'
+import LikeBar from './likeBar'
 import styles from './page.module.css'
 import jobInfo from './JobAPI'
 import { saveToStorage, getFromStorage } from './storage'
@@ -16,8 +16,8 @@ export default function Home() {
   const filteredJobs = jobAPI.filter((job) => !viewedJobs.includes(job))
   const currentJob = filteredJobs[currentJobIndex]
 
-  const appLoaded = getFromStorage('appLoaded');
-  const [isLoading, setIsLoading] = useState(!appLoaded);
+  const appLoaded = getFromStorage('appLoaded')
+  const [isLoading, setIsLoading] = useState(!appLoaded)
 
   const handleSwipe = (direction, isSuperLike) => {
     const jobToSave = filteredJobs[currentJobIndex]
@@ -63,17 +63,17 @@ export default function Home() {
 
   useEffect(() => {
     if (!appLoaded) {
-      saveToStorage('appLoaded', true);
+      saveToStorage('appLoaded', true)
     }
-  }, [appLoaded]);
-  
+  }, [appLoaded])
+
   useEffect(() => {
     if (isLoading) {
       setTimeout(() => {
-        setIsLoading(false);
-      }, 1300);
+        setIsLoading(false)
+      }, 1300)
     }
-  }, [isLoading]);
+  }, [isLoading])
 
   return (
     <>
