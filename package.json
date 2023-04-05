@@ -11,7 +11,6 @@
     "v": "vercel"
   },
   "dependencies": {
-    "@react-icons/all-files": "^4.1.0",
     "@react-spring/web": "^9.5.5",
     "eslint": "8.36.0",
     "eslint-config-next": "13.2.4",
@@ -19,14 +18,9 @@
     "jotai": "^2.0.3",
     "next": "13.2.4",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
-    "react-router-dom": "^6.10.0",
     "react-spring": "^9.7.1",
     "react-tinder-card": "^1.6.2",
-    "swipe-js-iso": "^2.1.5",
-    "swipejs": "^2.3.1",
-    "use-local-storage": "^2.3.6",
     "vercel": "^28.18.3"
   },
   "devDependencies": {
