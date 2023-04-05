@@ -60,7 +60,7 @@ const languageText = {
     apply: 'Apply Now',
     error: 'No job info found',
     backMatched: 'Back to Matched jobs',
-    // jobinfo
+    //jobinfo
     fullTime: 'Full-time',
     partTime: 'Part-time',
     hourly: 'Hourly employee',
