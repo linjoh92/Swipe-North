@@ -7,7 +7,6 @@ import { AiOutlineClockCircle } from 'react-icons/ai'
 import { MdWorkHistory } from 'react-icons/md'
 import { IoIosClose } from 'react-icons/io'
 
-
 export default function Modal(props) {
   const {
     imgUrl,
@@ -38,7 +37,7 @@ export default function Modal(props) {
         <h2>{companyName}</h2>
         <p>{jobTitle}</p>
       </div>
-      <p>{shortInfo.split('. ').slice(0, 1).join('. ')}</p>
+      <p>{shortInfo.split('. ').slice(0, 1).join('. ')}.</p>
 
       <div className={styles.iconAndInfoConatainer}>
         <div className={styles.iconAndInfo}>

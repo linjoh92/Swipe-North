@@ -4,6 +4,8 @@
   position: relative;
   top: 100px;
   min-height: calc(100vh - 100px);
+  justify-content: center;
+  align-items: center;
 }
 
 .titelContainer {
@@ -13,6 +15,7 @@
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   margin: 12px 12px 0 12px;
+  width: 100%;
 }
 
 .backConatiner {
@@ -61,7 +64,8 @@
 
 .infoConatiner {
   background-color: var(--lightgreen);
-  border-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   display: flex;
   flex-grow: 1;
   justify-content: space-between;
@@ -69,7 +73,7 @@
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  padding: 30px 42px;
+  padding: 30px 42px 50px;
 }
 
 .infoConatiner p {
@@ -86,7 +90,6 @@
   flex-direction: column;
   width: 100%;
   gap: 5px;
-  margin-bottom: 25px;
 }
 
 .iconAndInfo {
@@ -106,6 +109,8 @@
   font-weight: 700;
   align-items: center;
   display: flex;
+  position: relative;
+  bottom: -20px;
 }
 
 .errorHandel {

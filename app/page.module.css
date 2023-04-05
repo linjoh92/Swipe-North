@@ -104,7 +104,6 @@
   background-color: var(--lightgreen);
   color: white;
   position: fixed;
-  min-height: 480px;
   height: fit-content;
   z-index: 55;
   bottom: 0;
@@ -112,7 +111,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 0 30px;
+  padding: 0 30px 150px;
   gap: 15px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -159,20 +158,18 @@
   z-index: 20;
 }
 
-.closeModal{
+.closeModal {
   position: absolute;
   top: 2%;
   left: 88%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
   .main {
     height: calc(100% - 288px);
   }
 
-  .modal{
+  .modal {
     min-height: 400px;
   }
-
- 
 }

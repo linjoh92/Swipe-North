@@ -5,10 +5,10 @@ const jobInfo = [
     days: '6',
     id: '1',
     imgUrl: '/image/administration.png',
-    jobTitle: 'Marketing Administrator for Skellefteå Kraft',
+    jobTitle: 'Marknadsadministratör för Skellefteå Kraft',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27330840',
     shortInfo:
-      'Marketing Administrator position at Skellefteå Kraft. Marketing Administrator position at Skellefteå Kraft.',
+      'Tjänsten som marknadsadministratör på Skellefteå Kraft är ledig. Som marknadsadministratör på Skellefteå Kraft kommer du att arbeta med olika marknadsföringsuppgifter. Ansökan för marknadsadministratörstjänsten på Skellefteå Kraft är öppen.',
     type: 'Heltid',
   },
   {
@@ -17,9 +17,10 @@ const jobInfo = [
     days: '12',
     id: '2',
     imgUrl: '/image/teacher.png',
-    jobTitle: 'Education Coordinator, Vocational College',
+    jobTitle: 'Utbildningskoordinator, Yrkesutbildning',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27306228',
-    shortInfo: 'Experienced Education Coordinator for Vocational College.',
+    shortInfo:
+      'Erfaren utbildningskoordinator sökes till yrkeshögskola. Tjänsten som utbildningskoordinator på yrkeshögskolan kräver gedigen erfarenhet. Som utbildningskoordinator på yrkeshögskolan ansvarar du för att planera och samordna olika utbildningsaktiviteter.',
     type: 'Heltid',
   },
   {
@@ -28,9 +29,10 @@ const jobInfo = [
     days: '15',
     id: '3',
     imgUrl: '/image/tekniker.png',
-    jobTitle: 'Service Technician, Electronics',
+    jobTitle: 'Service Tekniker, Elektronik',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27285500',
-    shortInfo: 'Experienced Electronics Service Technician.',
+    shortInfo:
+      'Erfaren elektronikservice tekniker sökes. Tjänsten som elektronikservice tekniker kräver lång erfarenhet inom området. Som elektronikservice tekniker ansvarar du för att diagnostisera och åtgärda problem med elektroniska system och utrustning.',
     type: 'Heltid',
   },
   {
@@ -39,9 +41,10 @@ const jobInfo = [
     days: '18',
     id: '4',
     imgUrl: '/image/teacher.png',
-    jobTitle: 'High School Teacher - Vocational Subjects',
+    jobTitle: 'Gymnasielärare - Yrkesämnen',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27278916',
-    shortInfo: 'Experienced high school teacher in vocational subjects.',
+    shortInfo:
+      'En erfaren gymnasie lärare inom yrkesämnen efterfrågas för att ta ansvar för undervisning och utbildning av elever på gymnasiet. Personen bör ha goda kunskaper inom sitt yrkesområde samt ha pedagogisk erfarenhet och förmåga att anpassa undervisningen efter olika elevers behov och förutsättningar.',
     type: 'Heltid',
   },
   {
@@ -50,10 +53,10 @@ const jobInfo = [
     days: '18',
     id: '5',
     imgUrl: '/image/parishhost.png',
-    jobTitle: 'Parish Host',
+    jobTitle: 'Församlingsvärd',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27275819',
     shortInfo:
-      "Parish Host with experience in property cleaning and a driver's license (B).",
+      'En församlingsvärd med erfarenhet inom människovård och fastighetsunderhåll behövs för att ta hand om och stödja besökare och besökande grupper vid kyrkan. Personen bör ha kunskap om fastighetsunderhåll och dessutom vara en god lyssnare och stödjande individ.',
     type: 'Heltid',
   },
   {
@@ -62,10 +65,10 @@ const jobInfo = [
     days: '18',
     id: '6',
     imgUrl: '/image/parishhost.png',
-    jobTitle: 'Parish Host',
+    jobTitle: 'Församlingsvärd',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27275819',
     shortInfo:
-      'Parish Host with people care and property maintenance experience.',
+      'En avdelningschef med erfarenhet inom interna tjänster söks för ett tillfälligt uppdrag. Personen ska ansvara för att leda och stödja avdelningen samt implementera strategier och säkerställa att interna tjänster utförs på ett effektivt sätt.',
     type: 'Heltid',
   },
   {
@@ -74,10 +77,10 @@ const jobInfo = [
     days: '20',
     id: '7',
     imgUrl: '/image/sectionmanager.png',
-    jobTitle: 'Section Manager for Internal Services',
+    jobTitle: 'Avdelningschef för interna tjänster',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27264445',
     shortInfo:
-      'Section Manager with experience for a temporary appointment in Internal Services.',
+      'En avdelningschef med erfarenhet inom interna tjänster söks för ett tillfälligt uppdrag. Personen ska ansvara för att leda och stödja avdelningen samt implementera strategier och säkerställa att interna tjänster utförs på ett effektivt sätt.',
     type: 'Heltid',
   },
   {
@@ -86,9 +89,10 @@ const jobInfo = [
     days: '20',
     id: '8',
     imgUrl: '/image/unitmanager.png',
-    jobTitle: 'Unit Manager for Individual and Family Care',
+    jobTitle: 'Enhetschef för individ- och familjeomsorg',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27261362',
-    shortInfo: 'Unit Manager with experience in individual and family care.',
+    shortInfo:
+      'En enhetschef med erfarenhet inom individ- och familjevård eftersöks för att ansvara för en enhet inom socialtjänsten. Personen bör ha erfarenhet av att leda och stödja personal, samt ha goda kunskaper inom individ- och familjevård.',
     type: 'Heltid',
   },
   {
@@ -97,10 +101,10 @@ const jobInfo = [
     days: '22',
     id: '9',
     imgUrl: '/image/Ittechnician.png',
-    jobTitle: 'Industrial Technician in Skellefteå',
+    jobTitle: 'Industritekniker i Skellefteå',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27249075',
     shortInfo:
-      'ASSA ABLOY is looking for an Industrial Technician in Skellefteå.',
+      'ASSA ABLOY söker en industritekniker i Skellefteå för att ansvara för driftsättning och underhåll av maskiner samt förbättring av produktionsprocesser. Personen bör ha utbildning och erfarenhet inom området.',
     type: 'Heltid',
   },
   {
@@ -109,9 +113,10 @@ const jobInfo = [
     days: '56',
     id: '10',
     imgUrl: '/image/Ittechnician.png',
-    jobTitle: 'IT-Technician',
+    jobTitle: 'IT-tekniker',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27117962',
-    shortInfo: 'It position at Minnovation',
+    shortInfo:
+      'Minnovation har ett ledigt IT-jobb tillgängligt. Jobbet är öppet för sökande som har relevant kompetens inom IT. Intresserade sökande uppmanas att ansöka om jobbet hos Minnovation.',
     type: 'Heltid',
   },
   {
@@ -120,9 +125,10 @@ const jobInfo = [
     days: '11',
     id: '11',
     imgUrl: '/image/agileprojectmanager.png',
-    jobTitle: 'Agile project manager',
+    jobTitle: 'Agil projektledare',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27312792',
-    shortInfo: 'Project management',
+    shortInfo:
+      'En projektledare efterfrågas för att leda projekt och uppgifter inom ett specifikt område eller inom en organisation. Personen bör ha goda ledarskaps- och kommunikationsfärdigheter samt kunna samarbeta effektivt med olika parter.',
     type: 'Heltid',
   },
   {
@@ -131,9 +137,10 @@ const jobInfo = [
     days: '144',
     id: '12',
     imgUrl: '/image/systemdev.png',
-    jobTitle: 'System Developer',
+    jobTitle: 'Systemutvecklare',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/26752777',
-    shortInfo: 'WeSkill is looking for a senior c# developer',
+    shortInfo:
+      'WeSkill söker en senior C#-utvecklare för att hjälpa till att utveckla och förbättra företagets produkter. Personen bör ha relevant utbildning och erfarenhet av C#-programmering.',
     type: 'Heltid',
   },
   {
@@ -142,10 +149,10 @@ const jobInfo = [
     days: '14',
     id: '13',
     imgUrl: '/image/analysts.png',
-    jobTitle: 'Requirements analyst',
+    jobTitle: 'Kravanalytiker',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27293234',
     shortInfo:
-      'We are looking for a Requirement Analyst who is experienced in working with both agile development teams and in project organizations.',
+      'En kravanalytiker sökes för att arbeta med agila utvecklingsteam och projektorganisationer. Personen bör ha erfarenhet av att analysera krav och skapa lösningar.',
     type: 'Heltid',
   },
   {
@@ -154,10 +161,10 @@ const jobInfo = [
     days: '28',
     id: '14',
     imgUrl: '/image/it-support-site-manager.png',
-    jobTitle: 'IT Support Site Manager',
+    jobTitle: 'IT-support Site Manager',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27181338',
     shortInfo:
-      'We are looking for an experienced IT Support Site Manager. Happy to join us in our mission to contribute to a greener future.',
+      'Hos Northvolt blir du inte bara en anställd utan också en del av ett snabbväxande företag med hög energi och en dynamisk miljö. Detta innebär att du kommer att få möjlighet att utvecklas tillsammans med företaget och att du kommer att vara en del av en arbetsplats där det alltid händer något nytt och spännande.',
     type: 'Deltid',
   },
   {
@@ -166,10 +173,10 @@ const jobInfo = [
     days: '74',
     id: '15',
     imgUrl: '/image/systemdeveloper.png',
-    jobTitle: 'System developer',
+    jobTitle: 'Systemutvecklare',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27017861',
     shortInfo:
-      'We at Sogeti offer interesting and developing customer assignments in many different industries',
+      'På Sogeti kan du förvänta dig spännande och utmanande uppdrag inom olika branscher. Vi strävar efter att utveckla dina färdigheter och ge dig möjlighet att växa som professionell. Välkommen till en dynamisk och utvecklande arbetsplats!',
     type: 'Heltid',
   },
   {
@@ -178,10 +185,10 @@ const jobInfo = [
     days: '84',
     id: '16',
     imgUrl: '/image/master-data-specialist.png',
-    jobTitle: 'Master Data Specialist',
+    jobTitle: 'Specialist inom Masterdata',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/26978137',
     shortInfo:
-      'At Northvolt you will be part of a fast growing company. With high-energy and a dynamic environment.',
+      'Hos Northvolt blir du inte bara en anställd utan också en del av ett snabbväxande företag med hög energi och en dynamisk miljö. Detta innebär att du kommer att få möjlighet att utvecklas tillsammans med företaget och att du kommer att vara en del av en arbetsplats där det alltid händer något nytt och spännande.',
     type: 'Heltid',
   },
   {
@@ -190,10 +197,10 @@ const jobInfo = [
     days: '12',
     id: '17',
     imgUrl: '/image/c++-developer.png',
-    jobTitle: 'C++ Developer',
+    jobTitle: 'C++-utvecklare',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27304270',
     shortInfo:
-      'At Northvolt you will be part of a fast growing company with high-energy and a dynamic environment.',
+      'Northvolt är en arbetsplats som erbjuder en hög energinivå och en dynamisk miljö för sina anställda. Företaget är också snabbt växande, vilket innebär att du kommer att ha möjlighet att utvecklas och göra skillnad under din tid där. Att vara en del av Northvolt är en chans att vara med och bidra till en mer hållbar framtid.',
     type: 'Heltid',
   },
   {
@@ -202,10 +209,10 @@ const jobInfo = [
     days: '7',
     id: '18',
     imgUrl: '/image/mailman.png',
-    jobTitle: 'Mailman',
+    jobTitle: 'Brevbärare',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27323637',
     shortInfo:
-      'As a mailman, you are the pulse of everything we do. We change with the world, but our social mission is the same today as yesterday.',
+      'Som brevbärare hos oss på Postnord är du en viktig del av vår verksamhet. Vi är ett företag som ständigt förändras med världen runt omkring oss, men vår sociala mission är densamma idag som igår. Du kommer att spela en avgörande roll i att säkerställa att brev och paket levereras på ett säkert och pålitligt sätt, och att människor runt omkring i landet kan kommunicera och handla med varandra.',
     type: 'Deltid',
   },
   {
@@ -214,10 +221,10 @@ const jobInfo = [
     days: '13',
     id: '19',
     imgUrl: '/image/truckdriver.png',
-    jobTitle: 'Truckdriver',
+    jobTitle: 'Lastbilschaufför',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27295965',
     shortInfo:
-      'As a truckdriver, you are the pulse of everything we do. We change with the world, but our mission is the same today as yesterday.',
+      'Som lastbilschaufför är du pulsen i allt vi gör här på transportföretaget. Vi vet att världen runt omkring oss ständigt förändras, men vår mission är densamma idag som igår - att säkerställa att varor transporteras på ett säkert och pålitligt sätt. Som lastbilschaufför kommer du att ha en nyckelroll i att se till att varor levereras på rätt tid och plats, och att företag runt omkring i landet kan fortsätta att verka.',
     type: 'Heltid',
   },
   {
@@ -226,10 +233,10 @@ const jobInfo = [
     days: '13',
     id: '20',
     imgUrl: '/image/warehouse_worker.png',
-    jobTitle: 'Warehouse worker',
+    jobTitle: 'Lagerarbetare',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27229892',
     shortInfo:
-      'We are now looking for people for upcoming summer assignments at Svensk Cater. In Skellefteå during the weeks 24-33.',
+      'Svensk Cater söker för närvarande efter personal till våra kommande sommaruppdrag. Vi är ett företag som specialiserar sig på catering till evenemang och fester, och vi söker nu efter passionerade och entusiastiska människor som vill vara med och bidra till att skapa minnesvärda upplevelser för våra kunder.',
     type: 'Heltid',
   },
   {
@@ -238,10 +245,10 @@ const jobInfo = [
     days: '35',
     id: '21',
     imgUrl: '/image/tyrefitter.png',
-    jobTitle: 'Tyre fitter',
+    jobTitle: 'Däckmontör',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27201280',
     shortInfo:
-      'We are now looking for a number of tire fitters for our customer Däckia Skellefteå.',
+      'Vi söker för närvarande efter ett antal däckmontörer till vår kund Däckia i Skellefteå. Som däckmontör kommer du att ha en viktig roll i att se till att fordonen är säkra och redo för alla väderförhållanden. Du kommer att arbeta i ett team av erfarna montörer och ha möjlighet att utveckla din kompetens inom området.',
     type: 'Heltid',
   },
   {
@@ -250,10 +257,10 @@ const jobInfo = [
     days: '35',
     id: '22',
     imgUrl: '/image/bus_driver.png',
-    jobTitle: 'Bus driver',
+    jobTitle: 'Bussförare',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27258655',
     shortInfo:
-      "Bus drivers in Skellefteå! Come and work at Connect Bus. One of the Nordics' leading bus companies - which is constantly growing. We want YOU to grow with us!",
+      'Som bussförare hos Connect Bus kommer du att vara en del av ett av Nordens ledande bussföretag som ständigt växer. Vi söker nu efter drivna och passionerade människor som vill vara med och bidra till vår fortsatta framgång. Vi strävar efter att skapa en miljö där våra anställda kan växa och utvecklas tillsammans med oss.',
     type: 'Heltid',
   },
   {
@@ -262,10 +269,10 @@ const jobInfo = [
     days: '8',
     id: '23',
     imgUrl: '/image/milkman.png',
-    jobTitle: 'Milk delivery man',
+    jobTitle: 'Mjölkleverantör',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27305920',
     shortInfo:
-      'We are looking for a driver for our milk trucks in Umeå. Transport of milk to Umeå and Burträsk Mejeri.',
+      'Vi på företaget söker nu efter en förare till våra mjölkbilar i Umeå. Arbetet innebär transport av mjölk till både Umeå och Burträsk Mejeri. Om du har erfarenhet inom området och gillar att köra lastbil, kan detta vara en spännande möjlighet för dig.',
     type: 'Heltid',
   },
   {
@@ -274,10 +281,10 @@ const jobInfo = [
     days: '8',
     id: '24',
     imgUrl: '/image/terminal-worker.png',
-    jobTitle: 'Terminal worker',
+    jobTitle: 'Terminalarbetare',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27325699',
     shortInfo:
-      "Looking for an extra job? We are looking for terminal workers for one of Sweden's largest companies in Transport and distribution!",
+      'Letar du efter ett extrajobb? Då kan du vara intresserad av att höra att vi söker efter terminalarbetare till ett av Sveriges största företag inom transport och distribution. Ta chansen att bli en del av vår team och utveckla din karriär samtidigt som du får möjlighet att arbeta inom en spännande och växande bransch.',
     type: 'Heltid',
   },
   {
@@ -286,10 +293,10 @@ const jobInfo = [
     days: '13',
     id: '25',
     imgUrl: '/image/warehouse_worker.png',
-    jobTitle: 'Ware house worker',
+    jobTitle: 'Lagerarbetare',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27299227',
     shortInfo:
-      'Blomsterlandet in Skellefteå is looking for a warehouse worker with forklift experience. You should have a good physique and like working with the body.',
+      'Blomsterlandet i Skellefteå söker efter en lagerarbetare som har erfarenhet av att köra truck och är fysiskt kapabel att hantera företagets lager och varor. Den sökande kommer att ha ansvar för att hantera och organisera företagets lagringsutrymme samt lagerhantering och förberedelse av varor för försäljning. Personen behöver ha goda fysiska förmågor för att hantera tunga och skrymmande föremål.',
     type: 'Heltid',
   },
   {
@@ -298,10 +305,10 @@ const jobInfo = [
     days: '13',
     id: '26',
     imgUrl: '/image/warehouse_worker.png',
-    jobTitle: 'Ware house worker',
+    jobTitle: 'Lagerarbetare',
     link: 'https://arbetsformedlingen.se/platsbanken/annonser/27299227',
     shortInfo:
-      'Blomsterlandet in Skellefteå is looking for a warehouse worker with forklift experience. You should have a good physique and like working with the body.',
+      'Blomsterlandet i Skellefteå söker efter en lagerarbetare som har erfarenhet av att köra truck och är fysiskt kapabel att hantera företagets lager och varor. Den sökande kommer att ha ansvar för att hantera och organisera företagets lagringsutrymme samt lagerhantering och förberedelse av varor för försäljning. Personen behöver ha goda fysiska förmågor för att hantera tunga och skrymmande föremål.',
     type: 'Heltid',
   },
 ]

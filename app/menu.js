@@ -8,6 +8,7 @@ import { FaHeart } from 'react-icons/fa'
 import { MdOutlineLanguage } from 'react-icons/md'
 import { ImShare2 } from 'react-icons/im'
 import { useLanguage } from './language'
+import { BsCheckLg } from 'react-icons/bs'
 
 export default function Menu({ closeMenu }) {
   const { language, text, toggleLanguage } = useLanguage('swe')
@@ -40,6 +41,14 @@ export default function Menu({ closeMenu }) {
           >
             <FaHeart style={{ fontSize: '1.1rem' }} />
             <p>{text.saved}</p>
+          </Link>
+          <Link
+            href="/appliedJobs"
+            className={styles.menuOption}
+            onClick={closeMenu}
+          >
+            <BsCheckLg style={{ fontSize: '1.2rem' }} />
+            <p>{text.searched}</p>
           </Link>
         </div>
 
